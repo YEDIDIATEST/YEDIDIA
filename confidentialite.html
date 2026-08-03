@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Politique de confidentialité — YEDIDIA</title>
+<meta name="description" content="Comment YEDIDIA collecte, utilise, conserve et protège les données personnelles des bacheliers et de leurs parents, conformément à la loi ivoirienne n°2013-450." />
+<meta name="robots" content="index, follow" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+<link rel="icon" href="assets/mark.png" />
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="#14102B"/><rect x="58" y="46" width="84" height="108" rx="10" fill="#FFFFFF"/><rect x="74" y="70" width="52" height="7" rx="3.5" fill="#7C3AED"/><rect x="74" y="88" width="52" height="6" rx="3" fill="#CBD5E1"/><rect x="74" y="104" width="36" height="6" rx="3" fill="#CBD5E1"/><rect x="74" y="120" width="46" height="6" rx="3" fill="#CBD5E1"/></svg></template>
+<style>
+  @font-face { font-family: Poppins; font-style: normal; font-weight: 600 800; font-display: swap; src: url("assets/fonts/poppins-latin.woff2") format("woff2"); }
+  @font-face { font-family: Inter; font-style: normal; font-weight: 400 700; font-display: swap; src: url("assets/fonts/inter-latin.woff2") format("woff2"); }
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { background: #F7F6FB; }
+  a { color: #4F46E5; }
+  a:hover { color: #7C3AED; }
+</style>
+</helmet>
+
+<div style="font-family: Inter, system-ui, -apple-system, sans-serif; color: #14102B; background: #F7F6FB; min-height: 100%; -webkit-font-smoothing: antialiased;">
+
+  <header style="background: #14102B; color: #FFFFFF;">
+    <div style="max-width: 820px; margin: 0 auto; padding: 22px 24px; display: flex; align-items: center; gap: 12px;">
+      <a href="index.html" style="display: flex; align-items: center; gap: 11px; color: #FFFFFF;">
+        <img src="assets/mark.png" alt="" style="width: 34px; height: 34px; display: block;" />
+        <span style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800; letter-spacing: .12em; font-size: 16px;">YEDIDIA</span>
+      </a>
+      <span style="margin-left: auto; font-size: 13px; color: #A5A0C4;">Politique de confidentialité</span>
+    </div>
+  </header>
+
+  <main style="max-width: 820px; margin: 0 auto; padding: 46px 24px 90px;">
+    <p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: #7C3AED;">Protection des données</p>
+    <h1 style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 40px; line-height: 1.12; letter-spacing: -.02em; margin: 14px 0 0; text-wrap: pretty;">Politique de confidentialité</h1>
+    <p style="margin: 18px 0 0; font-size: 17px; line-height: 1.75; color: #475569; max-width: 40em; text-wrap: pretty;">YEDIDIA traite les données de jeunes bacheliers, souvent mineurs. Cette page dit exactement ce que nous collectons, pourquoi, combien de temps nous le gardons, et comment vous pouvez tout faire supprimer. Elle est écrite pour être lue, pas pour être signée à l'aveugle.</p>
+    <p style="margin: 20px 0 0; font-size: 13px; color: #94A3B8;">Version 1.0 — en vigueur au {{ dateMaj }} · Établie conformément à la loi ivoirienne n°2013-450 du 19 juin 2013 relative à la protection des données à caractère personnel.</p>
+
+    <div style="margin-top: 34px; border: 1px solid #FDE68A; background: #FFFBEB; border-radius: 18px; padding: 22px 24px;">
+      <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 16px; color: #92400E;">L'essentiel en cinq lignes</div>
+      <ul style="margin: 12px 0 0; padding-left: 20px; font-size: 14.5px; line-height: 1.85; color: #78350F;">
+        <li>Nous collectons vos coordonnées, vos réponses au questionnaire et vos notes — rien d'autre.</li>
+        <li>Nous nous en servons uniquement pour produire et vous livrer votre rapport d'orientation.</li>
+        <li>Nous ne vendons, ne louons et n'échangeons aucune donnée. Jamais.</li>
+        <li>Pour un mineur, l'accord d'un parent est demandé avant tout traitement.</li>
+        <li>Tout est supprimé 12 mois après la livraison du rapport, ou dès que vous le demandez.</li>
+      </ul>
+    </div>
+
+    <sc-for list="{{ sections }}" as="sec" hint-placeholder-count="9">
+      <section style="margin-top: 44px;">
+        <h2 style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 23px; line-height: 1.3; letter-spacing: -.01em; margin: 0; text-wrap: pretty;">{{ sec.titre }}</h2>
+        <sc-for list="{{ sec.paras }}" as="p" hint-placeholder-count="2">
+          <p style="margin: 14px 0 0; font-size: 15.5px; line-height: 1.85; color: #475569; max-width: 42em; text-wrap: pretty;">{{ p }}</p>
+        </sc-for>
+        <sc-if value="{{ sec.aPuces }}" hint-placeholder-val="{{ false }}">
+          <ul style="margin: 14px 0 0; padding-left: 22px; font-size: 15.5px; line-height: 1.85; color: #475569; max-width: 42em;">
+            <sc-for list="{{ sec.puces }}" as="li" hint-placeholder-count="3">
+              <li style="margin-top: 4px;">{{ li }}</li>
+            </sc-for>
+          </ul>
+        </sc-if>
+      </section>
+    </sc-for>
+
+    <section style="margin-top: 48px; background: #FFFFFF; border: 1px solid rgba(20,16,43,.09); border-radius: 22px; padding: 30px;">
+      <h2 style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 21px; margin: 0;">Exercer vos droits</h2>
+      <p style="margin: 12px 0 0; font-size: 15.5px; line-height: 1.8; color: #475569;">Écrivez à <a href="mailto:donnees@yedidia.ci" style="font-weight: 600;">donnees@yedidia.ci</a> en précisant l'adresse e-mail ou le numéro utilisé lors de la demande. Nous répondons sous <strong>30 jours</strong>. Aucun justificatif d'identité n'est exigé au-delà de la preuve que vous contrôlez ce canal.</p>
+      <p style="margin: 14px 0 0; font-size: 15.5px; line-height: 1.8; color: #475569;">Si notre réponse ne vous satisfait pas, vous pouvez saisir l'<strong>ARTCI</strong> (Autorité de Régulation des Télécommunications/TIC de Côte d'Ivoire), autorité de contrôle compétente en matière de données personnelles : <a href="https://www.artci.ci" target="_blank" rel="noopener noreferrer">artci.ci</a>.</p>
+      <p style="margin: 14px 0 0; font-size: 15.5px; line-height: 1.8; color: #475569;">Faille de sécurité ou usage abusif constaté : <a href="mailto:securite@yedidia.ci" style="font-weight: 600;">securite@yedidia.ci</a>. Nous vous répondons et corrigeons sans chercher à vous inquiéter.</p>
+    </section>
+
+    <p style="margin: 40px 0 0; font-size: 13.5px; line-height: 1.8; color: #94A3B8;">Cette politique peut évoluer. Toute modification substantielle sera annoncée sur cette page avec une nouvelle date de version, et une nouvelle demande d'accord vous sera adressée si la finalité du traitement change.</p>
+
+    <div style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 20px; font-size: 14px; font-weight: 600;">
+      <a href="index.html">← Retour à l'accueil</a>
+      <a href="mentions-legales.html">Mentions légales</a>
+    </div>
+  </main>
+
+  <footer style="background: #FFFFFF; border-top: 1px solid rgba(20,16,43,.08);">
+    <div style="max-width: 820px; margin: 0 auto; padding: 30px 24px 46px;">
+      <p style="margin: 0; font-size: 12.5px; line-height: 1.75; color: #94A3B8;">YEDIDIA — Abidjan, Côte d'Ivoire · Service d'accompagnement privé, indépendant du MESRS et des établissements cités. © {{ annee }}</p>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;responsable&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;YEDIDIA, Abidjan, Côte d'Ivoire&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;dateMaj&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;3 août 2026&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const S = (titre, paras, puces) => ({ titre, paras, puces: puces || [], aPuces: !!(puces && puces.length) });
+    return {
+      annee: new Date().getFullYear(),
+      dateMaj: this.props.dateMaj ?? "3 août 2026",
+      sections: [
+        S("1. Qui est responsable de vos données", [
+          "Le responsable du traitement est " + (this.props.responsable ?? "YEDIDIA, Abidjan, Côte d'Ivoire") + ", éditeur du service d'accompagnement à l'orientation YEDIDIA. Contact : contact@yedidia.ci — pour les seules questions de données : donnees@yedidia.ci.",
+          "YEDIDIA est un service privé. Nous ne sommes ni le ministère de l'Enseignement supérieur et de la Recherche scientifique, ni un établissement d'enseignement, ni un intermédiaire d'affectation. Nous ne pouvons donc influencer aucune décision officielle et nous ne demandons jamais vos identifiants de connexion aux plateformes du ministère."
+        ]),
+        S("2. Les données que nous collectons", [
+          "Nous ne collectons que ce qui est nécessaire à la production de votre rapport d'orientation :"
+        ], [
+          "Coordonnées de contact : adresse e-mail (obligatoire, elle sert à confirmer la demande), numéro WhatsApp et identifiant Telegram (facultatifs, uniquement si vous les renseignez).",
+          "E-mail du parent ou tuteur, lorsque le bachelier a moins de 18 ans.",
+          "Réponses au questionnaire : centres d'intérêt, traits de personnalité, aptitudes déclarées, projet professionnel.",
+          "Résultats scolaires : série du baccalauréat, moyennes et notes que vous saisissez vous-même.",
+          "Preuve de consentement : date, heure et contenu de l'accord donné, comme la loi l'exige.",
+          "Données techniques minimales liées à l'envoi du formulaire (horodatage). Le site n'utilise aucun cookie publicitaire, aucun traceur, aucun outil de mesure d'audience tiers."
+        ]),
+        S("3. Pourquoi nous les traitons", [
+          "Une seule finalité : analyser votre profil et vous livrer un rapport d'orientation personnalisé sur le ou les canaux que vous avez indiqués. Aucune donnée n'est utilisée pour de la prospection commerciale, du profilage publicitaire ou une revente.",
+          "La base légale est votre consentement libre, explicite et révocable à tout moment. Le refus n'a pas d'autre conséquence que l'impossibilité de produire le rapport."
+        ]),
+        S("4. Mineurs : l'accord d'un parent est obligatoire", [
+          "La plupart des nouveaux bacheliers ont moins de 18 ans. Dans ce cas, le formulaire demande l'adresse e-mail d'un parent ou tuteur, et la demande de confirmation lui est envoyée. Sans son clic de confirmation, aucune donnée n'est conservée et aucun rapport n'est produit.",
+          "Un parent peut à tout moment demander l'accès au rapport de son enfant mineur, sa rectification ou sa suppression, en écrivant à donnees@yedidia.ci."
+        ]),
+        S("5. Double confirmation : rien ne part sans votre clic", [
+          "Après l'envoi du formulaire, vous recevez un e-mail contenant un lien de confirmation à usage unique. Tant que ce lien n'est pas utilisé, votre demande reste à l'état d'ébauche et est effacée automatiquement au bout de 7 jours.",
+          "Ce mécanisme empêche qu'une autre personne inscrive votre adresse ou votre numéro à votre place, et garantit qu'aucun message non sollicité ne part depuis nos systèmes."
+        ]),
+        S("6. Qui peut y accéder", [
+          "Les données sont accessibles à l'équipe YEDIDIA strictement chargée de la production des rapports. Elles sont hébergées dans l'environnement Google Workspace du service (Sheets, Apps Script, Gmail), qui agit comme sous-traitant technique et peut les stocker sur des serveurs situés hors de Côte d'Ivoire.",
+          "Aucune donnée n'est transmise à un établissement d'enseignement, à un annonceur, à un courtier en données ou à un partenaire commercial. Nous ne répondrions à une demande d'autorité que sur réquisition judiciaire régulière."
+        ]),
+        S("7. Combien de temps nous les gardons", [
+          "Demande non confirmée : effacée au bout de 7 jours. Dossier confirmé et rapport livré : conservé 12 mois, délai qui couvre la campagne d'orientation et vos éventuelles questions de suivi, puis supprimé. Preuve de consentement : conservée 3 ans après la fin de la relation, durée strictement probatoire imposée par la réglementation.",
+          "Vous pouvez raccourcir ces durées à tout moment en demandant la suppression."
+        ]),
+        S("8. Comment nous les protégeons", [
+          "Le site est servi exclusivement en HTTPS. L'accès à votre rapport passe par un lien à jeton long, à usage unique et non indexable — il n'existe aucune page listant les rapports. Les accès aux fichiers de travail sont nominatifs et protégés par authentification à deux facteurs. Aucun mot de passe ni donnée bancaire ne vous est jamais demandé : le diagnostic est gratuit et nous n'encaissons aucun paiement.",
+          "Méfiez-vous de tout message qui, en se présentant comme YEDIDIA, vous réclamerait de l'argent, un code de vérification ou un mot de passe. Signalez-le à securite@yedidia.ci."
+        ]),
+        S("9. Vos droits", [
+          "Conformément à la loi n°2013-450, vous disposez d'un droit d'accès, de rectification, d'opposition, de limitation, d'effacement et de portabilité de vos données, ainsi que du droit de retirer votre consentement à tout moment sans justification."
+        ], [
+          "Accès : obtenir la copie de tout ce que nous détenons sur vous.",
+          "Rectification : corriger une note, une adresse, une réponse erronée.",
+          "Effacement : faire supprimer l'intégralité du dossier, y compris le rapport produit.",
+          "Retrait du consentement : arrêter immédiatement tout envoi, sur tous les canaux.",
+          "Portabilité : recevoir vos données dans un format lisible et réutilisable."
+        ])
+      ]
+    };
+  }
+}
+
+</script>
+</body>
+</html>

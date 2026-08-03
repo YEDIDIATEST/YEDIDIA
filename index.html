@@ -14,20 +14,20 @@
 <meta property="og:title" content="YEDIDIA — Le test d'orientation des bacheliers ivoiriens" />
 <meta property="og:description" content="35 minutes de questionnaire. Un bilan d'orientation personnalisé reçu sur WhatsApp, e-mail ou Telegram." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://yedidiatest.github.io/YEDIDIA/" />
-<meta property="og:image" content="https://yedidiatest.github.io/YEDIDIA/photo-ados.jpg" />
+<meta property="og:url" content="https://odicarine-lgtm.github.io/YEDIDIA/" />
+<meta property="og:image" content="https://odicarine-lgtm.github.io/YEDIDIA/assets/photo-ados.jpg" />
 <meta property="og:locale" content="fr_CI" />
-<link rel="canonical" href="https://yedidiatest.github.io/YEDIDIA/" />
-<link rel="icon" href="mark.png" />
+<link rel="canonical" href="https://odicarine-lgtm.github.io/YEDIDIA/" />
+<link rel="icon" href="assets/mark.png" />
 <meta name="twitter:card" content="summary_large_image" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
 <template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="#14102B"/><circle cx="100" cy="100" r="52" fill="none" stroke="#7C3AED" stroke-width="6"/><path d="M100 52 L112 88 L148 100 L112 112 L100 148 L88 112 L52 100 L88 88 Z" fill="#FBBF24"/></svg></template>
 <style>
+  @font-face { font-family: Poppins; font-style: normal; font-weight: 600 800; font-display: swap; src: url("assets/fonts/poppins-latin.woff2") format("woff2"); }
+  @font-face { font-family: Inter; font-style: normal; font-weight: 400 700; font-display: swap; src: url("assets/fonts/inter-latin.woff2") format("woff2"); }
   *, *::before, *::after { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
-  body { margin: 0; background: #FBFAFC; color: #14102B; font-family: Inter, "Segoe UI", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  body { margin: 0; background: #FBFAFC; color: #14102B; font-family: Inter, system-ui, -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
   a { color: #4F46E5; text-decoration: none; }
   a:hover { color: #7C3AED; }
   summary::-webkit-details-marker { display: none; }
@@ -60,8 +60,8 @@
   <div style="position: sticky; top: 0; z-index: 60; backdrop-filter: blur(14px); background: rgba(251,250,252,.82); border-bottom: 1px solid rgba(20,16,43,.07);">
     <div style="max-width: 1180px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; gap: 20px;">
       <div style="display: flex; align-items: center; gap: 12px;">
-        <img src="mark.png" alt="" style="width: 44px; height: 44px; display: block;" />
-        <span style="font-family: Poppins, sans-serif; font-weight: 800; letter-spacing: .11em; font-size: 23px;">YEDIDIA</span>
+        <img src="assets/mark.png" alt="" style="width: 44px; height: 44px; display: block;" />
+        <span style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800; letter-spacing: .11em; font-size: 23px;">YEDIDIA</span>
       </div>
       <div style="flex: 1;"></div>
       <div style="display: none; gap: 26px; font-size: 14px; font-weight: 500; color: #64748B;" data-desk-nav="1">
@@ -71,15 +71,15 @@
         <a href="#actualites" style="color: #64748B;">Actualités</a>
         <a href="#faq" style="color: #64748B;">FAQ</a>
       </div>
-      <button onClick="{{ openPay }}" style="border: 0; cursor: pointer; font-family: Inter, sans-serif; font-weight: 700; font-size: 14px; color: #14102B; background: #FBBF24; padding: 11px 18px; border-radius: 999px; box-shadow: 0 6px 18px rgba(251,191,36,.35); transition: transform .18s ease, box-shadow .18s ease;" style-hover="transform: translateY(-2px); box-shadow: 0 10px 24px rgba(251,191,36,.45);">Commencer mon diagnostic</button>
+      <button onClick="{{ openPay }}" style="border: 0; cursor: pointer; font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 14px; color: #14102B; background: #FBBF24; padding: 11px 18px; border-radius: 999px; box-shadow: 0 6px 18px rgba(251,191,36,.35); transition: transform .18s ease, box-shadow .18s ease;" style-hover="transform: translateY(-2px); box-shadow: 0 10px 24px rgba(251,191,36,.45);">Commencer mon diagnostic</button>
     </div>
   </div>
 
   <div style="max-width: 1180px; margin: 0 auto; padding: 18px 24px 0; display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
     <span style="font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: #94A3B8; font-weight: 700;">Direction</span>
     <div style="display: flex; gap: 6px; padding: 5px; background: #F1F0F6; border-radius: 999px;">
-      <button onClick="{{ pickA }}" style="border: 0; cursor: pointer; font-family: Inter, sans-serif; font-size: 13px; font-weight: 600; padding: 9px 16px; border-radius: 999px; background: {{ tabABg }}; color: {{ tabAFg }}; box-shadow: {{ tabASh }};">A · Parents d'abord</button>
-      <button onClick="{{ pickB }}" style="border: 0; cursor: pointer; font-family: Inter, sans-serif; font-size: 13px; font-weight: 600; padding: 9px 16px; border-radius: 999px; background: {{ tabBBg }}; color: {{ tabBFg }}; box-shadow: {{ tabBSh }};">B · Élève d'abord</button>
+      <button onClick="{{ pickA }}" style="border: 0; cursor: pointer; font-family: Inter, system-ui, -apple-system, sans-serif; font-size: 13px; font-weight: 600; padding: 9px 16px; border-radius: 999px; background: {{ tabABg }}; color: {{ tabAFg }}; box-shadow: {{ tabASh }};">A · Parents d'abord</button>
+      <button onClick="{{ pickB }}" style="border: 0; cursor: pointer; font-family: Inter, system-ui, -apple-system, sans-serif; font-size: 13px; font-weight: 600; padding: 9px 16px; border-radius: 999px; background: {{ tabBBg }}; color: {{ tabBFg }}; box-shadow: {{ tabBSh }};">B · Élève d'abord</button>
     </div>
   </div>
 
@@ -90,7 +90,7 @@
           <span style="width: 7px; height: 7px; border-radius: 50%; background: #4F46E5; animation: yPulse 2.4s ease-in-out infinite;"></span>
           Rentrée 2026 · Côte d'Ivoire
         </div>
-        <h1 style="font-family: Poppins, sans-serif; font-weight: 800; font-size: clamp(34px, 4.6vw, 58px); line-height: 1.04; letter-spacing: -.03em; margin: 22px 0 0; text-wrap: balance;">Le choix de filière de votre enfant mérite mieux qu'une intuition.</h1>
+        <h1 style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800; font-size: clamp(34px, 4.6vw, 58px); line-height: 1.04; letter-spacing: -.03em; margin: 22px 0 0; text-wrap: balance;">Le choix de filière de votre enfant mérite mieux qu'une intuition.</h1>
         <p style="margin: 22px 0 0; font-size: clamp(17px, 2.2vw, 20px); line-height: 1.6; color: #475569; max-width: 34em; text-wrap: pretty;">YEDIDIA analyse sa personnalité, ses intérêts, ses aptitudes et ses résultats, puis remet un bilan d'orientation personnalisé : filières compatibles, établissements, métiers et conseils concrets.</p>
         <div style="margin-top: 28px; display: flex; flex-wrap: wrap; align-items: center; gap: 16px; padding: 16px 20px; border-radius: 18px; background: #0C0828; color: #FFFFFF;">
           <div style="flex: none;">
@@ -101,7 +101,7 @@
             <div style="flex: 1; min-width: 190px; display: flex; align-items: center; gap: 12px;">
               <span style="width: 8px; height: 8px; border-radius: 50%; background: #F87171; animation: yPulse 1.4s ease-in-out infinite;"></span>
               <div>
-                <div style="font-family: Poppins, sans-serif; font-weight: 800; font-size: 22px; font-variant-numeric: tabular-nums; letter-spacing: -.01em;">{{ piTxt }}</div>
+                <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 22px; font-variant-numeric: tabular-nums; letter-spacing: -.01em;">{{ piTxt }}</div>
                 <div style="font-size: 12px; color: rgba(255,255,255,.6);">restants pour déposer vos vœux</div>
               </div>
             </div>
@@ -111,13 +111,13 @@
           </sc-if>
         </div>
         <div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin-top: 26px;">
-          <button onClick="{{ openPay }}" style="border: 0; cursor: pointer; font-family: Inter, sans-serif; font-weight: 700; font-size: 16px; color: #14102B; background: #FBBF24; padding: 17px 28px; border-radius: 999px; box-shadow: 0 12px 30px rgba(251,191,36,.4); transition: transform .18s ease, box-shadow .18s ease;" style-hover="transform: translateY(-2px); box-shadow: 0 16px 38px rgba(251,191,36,.5);">Commencer le diagnostic — {{ prixLabel }}</button>
+          <button onClick="{{ openPay }}" style="border: 0; cursor: pointer; font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 16px; color: #14102B; background: #FBBF24; padding: 17px 28px; border-radius: 999px; box-shadow: 0 12px 30px rgba(251,191,36,.4); transition: transform .18s ease, box-shadow .18s ease;" style-hover="transform: translateY(-2px); box-shadow: 0 16px 38px rgba(251,191,36,.5);">Commencer le diagnostic — c'est gratuit</button>
           <a href="#rapport" style="font-weight: 600; font-size: 15px; color: #4F46E5; padding: 16px 6px;">Voir un exemple de rapport →</a>
         </div>
         <sc-if value="{{ promo }}" hint-placeholder-val="{{ true }}">
           <div style="margin-top: 18px; display: inline-flex; flex-wrap: wrap; align-items: center; gap: 12px; padding: 12px 16px; border-radius: 14px; background: #FFFBEB; border: 1px solid #FDE68A; font-size: 14px;">
             <span style="text-decoration: line-through; color: #94A3B8; font-weight: 600;">{{ prixPleinLabel }}</span>
-            <span style="font-family: Poppins, sans-serif; font-weight: 800; font-size: 18px;">{{ prixLabel }}</span>
+            <span style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 18px;">{{ prixLabel }}</span>
             <span style="background: #14102B; color: #FBBF24; font-weight: 700; font-size: 12px; padding: 4px 10px; border-radius: 999px;">{{ remiseLabel }} lancement</span>
             <span style="color: #92400E; font-weight: 600;">{{ promoJours }} jours seulement</span>
           </div>
@@ -130,10 +130,10 @@
       </div>
       <div style="position: relative; align-self: stretch; display: flex; flex-direction: column;">
         <div style="flex: 1; border-radius: 26px; overflow: hidden; box-shadow: 0 30px 70px rgba(20,16,43,.18); min-height: 420px;">
-          <img src="photo-parents.jpg" alt="Une mère et son fils consultent le test d'orientation sur un téléphone" style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 55% 42%;" />
+          <img src="assets/photo-parents.jpg" alt="Une mère et son fils consultent le test d'orientation sur un téléphone" style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 55% 42%;" />
         </div>
         <div style="position: absolute; left: -8px; bottom: -26px; background: #FFFFFF; border-radius: 18px; padding: 16px 18px; box-shadow: 0 18px 40px rgba(20,16,43,.14); display: flex; align-items: center; gap: 14px; max-width: 300px;">
-          <div style="width: 42px; height: 42px; border-radius: 12px; background: linear-gradient(135deg, #4F46E5, #7C3AED); display: flex; align-items: center; justify-content: center; color: #fff; font-family: Poppins, sans-serif; font-weight: 800; font-size: 15px;">RIE</div>
+          <div style="width: 42px; height: 42px; border-radius: 12px; background: linear-gradient(135deg, #4F46E5, #7C3AED); display: flex; align-items: center; justify-content: center; color: #fff; font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 15px;">RIE</div>
           <div>
             <div style="font-size: 12px; color: #64748B; font-weight: 600;">Code Holland détecté</div>
             <div style="font-size: 14px; font-weight: 700;">Réaliste · Investigateur · Entreprenant</div>
@@ -152,7 +152,7 @@
             <span style="width: 7px; height: 7px; border-radius: 50%; background: #FBBF24; animation: yPulse 2.2s ease-in-out infinite;"></span>
             Bacheliers 2026
           </div>
-          <h1 style="font-family: Poppins, sans-serif; font-weight: 800; font-size: clamp(40px, 7vw, 74px); line-height: .98; letter-spacing: -.035em; margin: 20px 0 0;">Ta filière idéale existe.<br /><span style="color: #FBBF24;">Trouve-la en 35 minutes.</span></h1>
+          <h1 style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800; font-size: clamp(40px, 7vw, 74px); line-height: .98; letter-spacing: -.035em; margin: 20px 0 0;">Ta filière idéale existe.<br /><span style="color: #FBBF24;">Trouve-la en 35 minutes.</span></h1>
           <p style="margin: 20px 0 0; font-size: clamp(17px, 2.2vw, 20px); line-height: 1.6; color: rgba(255,255,255,.76); max-width: 30em; text-wrap: pretty;">Réponds honnêtement. L'IA croise ta personnalité, tes intérêts, tes aptitudes et tes notes, puis t'envoie ton bilan d'orientation perso sur WhatsApp.</p>
           <div style="margin-top: 26px; display: flex; flex-wrap: wrap; align-items: center; gap: 16px; padding: 16px 20px; border-radius: 18px; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.14);">
             <div style="flex: none;">
@@ -163,7 +163,7 @@
               <div style="flex: 1; min-width: 190px; display: flex; align-items: center; gap: 12px;">
                 <span style="width: 8px; height: 8px; border-radius: 50%; background: #F87171; animation: yPulse 1.4s ease-in-out infinite;"></span>
                 <div>
-                  <div style="font-family: Poppins, sans-serif; font-weight: 800; font-size: 22px; font-variant-numeric: tabular-nums;">{{ piTxt }}</div>
+                  <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 22px; font-variant-numeric: tabular-nums;">{{ piTxt }}</div>
                   <div style="font-size: 12px; color: rgba(255,255,255,.58);">il te reste ça pour choisir ta filière</div>
                 </div>
               </div>
@@ -173,13 +173,13 @@
             </sc-if>
           </div>
           <div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin-top: 26px;">
-            <button onClick="{{ openPay }}" style="border: 0; cursor: pointer; font-family: Inter, sans-serif; font-weight: 700; font-size: 16px; color: #14102B; background: #FBBF24; padding: 17px 28px; border-radius: 999px; box-shadow: 0 14px 34px rgba(251,191,36,.35); transition: transform .18s ease;" style-hover="transform: translateY(-2px);">Je commence — {{ prixLabel }}</button>
+            <button onClick="{{ openPay }}" style="border: 0; cursor: pointer; font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 16px; color: #14102B; background: #FBBF24; padding: 17px 28px; border-radius: 999px; box-shadow: 0 14px 34px rgba(251,191,36,.35); transition: transform .18s ease;" style-hover="transform: translateY(-2px);">Je commence — c'est gratuit</button>
             <a href="#rapport" style="font-weight: 600; font-size: 15px; color: #FFFFFF; padding: 16px 6px; border-bottom: 1px solid rgba(255,255,255,.35);">À quoi ressemble mon rapport ?</a>
           </div>
           <sc-if value="{{ promo }}" hint-placeholder-val="{{ true }}">
             <div style="margin-top: 18px; display: inline-flex; flex-wrap: wrap; align-items: center; gap: 12px; padding: 12px 16px; border-radius: 14px; background: rgba(255,255,255,.08); border: 1px solid rgba(251,191,36,.4); font-size: 14px;">
               <span style="text-decoration: line-through; color: rgba(255,255,255,.5); font-weight: 600;">{{ prixPleinLabel }}</span>
-              <span style="font-family: Poppins, sans-serif; font-weight: 800; font-size: 18px; color: #FBBF24;">{{ prixLabel }}</span>
+              <span style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 18px; color: #FBBF24;">{{ prixLabel }}</span>
               <span style="background: #FBBF24; color: #14102B; font-weight: 700; font-size: 12px; padding: 4px 10px; border-radius: 999px;">{{ remiseLabel }} lancement</span>
               <span style="color: rgba(255,255,255,.7); font-weight: 600; font-variant-numeric: tabular-nums;">Fin dans {{ countdown }}</span>
             </div>
@@ -191,7 +191,7 @@
           </div>
         </div>
         <div style="align-self: stretch; display: flex; padding-top: 8px;">
-          <img src="photo-ados.jpg" alt="Quatre jeunes bacheliers sur un toit d'Abidjan au coucher du soleil" style="width: 100%; height: 100%; min-height: 440px; display: block; border-radius: 26px 26px 0 0; object-fit: cover; object-position: 50% 42%;" />
+          <img src="assets/photo-ados.jpg" alt="Quatre jeunes bacheliers sur un toit d'Abidjan au coucher du soleil" style="width: 100%; height: 100%; min-height: 440px; display: block; border-radius: 26px 26px 0 0; object-fit: cover; object-position: 50% 42%;" />
         </div>
       </div>
     </section>
@@ -201,7 +201,7 @@
     <div style="max-width: 1180px; margin: 0 auto; padding: 84px 24px;">
       <div style="max-width: 40rem;">
         <div style="font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: #7C3AED; font-weight: 700;">Le vrai problème</div>
-        <h2 style="font-family: Poppins, sans-serif; font-weight: 800; font-size: clamp(28px, 4vw, 44px); line-height: 1.1; letter-spacing: -.025em; margin: 16px 0 0;">Chaque année, des milliers de bacheliers choisissent une filière par défaut.</h2>
+        <h2 style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800; font-size: clamp(28px, 4vw, 44px); line-height: 1.1; letter-spacing: -.025em; margin: 16px 0 0;">Chaque année, des milliers de bacheliers choisissent une filière par défaut.</h2>
       </div>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 18px; margin-top: 44px;">
         <div style="background: #FBFAFC; border: 1px solid rgba(20,16,43,.07); border-radius: 20px; padding: 26px;">
@@ -228,11 +228,11 @@
     <section data-screen-label="Parents (direction A)" data-reveal="1" style="max-width: 1180px; margin: 0 auto; padding: 84px 24px;">
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; align-items: center;">
         <div style="border-radius: 24px; overflow: hidden; box-shadow: 0 24px 60px rgba(20,16,43,.14);">
-          <img src="photo-solo.jpg" alt="Une jeune bachelière ivoirienne regarde vers l'avenir" style="width: 100%; display: block; aspect-ratio: 4/3; object-fit: cover; object-position: 50% 35%;" />
+          <img src="assets/photo-solo.jpg" alt="Une jeune bachelière ivoirienne regarde vers l'avenir" style="width: 100%; display: block; aspect-ratio: 4/3; object-fit: cover; object-position: 50% 35%;" />
         </div>
         <div>
           <div style="font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: #4F46E5; font-weight: 700;">Pour les parents</div>
-          <h2 style="font-family: Poppins, sans-serif; font-weight: 800; font-size: clamp(28px, 4vw, 42px); line-height: 1.1; letter-spacing: -.025em; margin: 16px 0 0;">Vous financez ces études. Vous méritez une décision documentée.</h2>
+          <h2 style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800; font-size: clamp(28px, 4vw, 42px); line-height: 1.1; letter-spacing: -.025em; margin: 16px 0 0;">Vous financez ces études. Vous méritez une décision documentée.</h2>
           <div style="display: grid; gap: 18px; margin-top: 28px;">
             <div style="display: flex; gap: 14px; align-items: flex-start;">
               <span style="flex: none; width: 26px; height: 26px; border-radius: 8px; background: #EEF2FF; color: #4F46E5; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 13px;">1</span>
@@ -249,7 +249,7 @@
           </div>
           <div style="margin-top: 28px; padding: 18px 20px; border-radius: 16px; background: #0C0828; color: #FFFFFF; display: flex; flex-wrap: wrap; gap: 14px; align-items: center; justify-content: space-between;">
             <div style="font-size: 14px; line-height: 1.5;">Un mineur ? L'accord d'un parent est demandé dans le questionnaire.</div>
-            <button onClick="{{ openPay }}" style="border: 0; cursor: pointer; font-family: Inter, sans-serif; font-weight: 700; font-size: 14px; color: #14102B; background: #FBBF24; padding: 12px 18px; border-radius: 999px;">Offrir le diagnostic</button>
+            <button onClick="{{ openPay }}" style="border: 0; cursor: pointer; font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 14px; color: #14102B; background: #FBBF24; padding: 12px 18px; border-radius: 999px;">Offrir le diagnostic</button>
           </div>
         </div>
       </div>
@@ -261,31 +261,31 @@
     <div style="position: relative; max-width: 1180px; margin: 0 auto; padding: 92px 24px;">
       <div style="max-width: 34rem;">
         <div style="font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: #FBBF24; font-weight: 700;">La solution</div>
-        <h2 style="font-family: Poppins, sans-serif; font-weight: 800; font-size: clamp(28px, 4.2vw, 46px); line-height: 1.08; letter-spacing: -.03em; margin: 16px 0 0;">Un diagnostic, pas un quiz.</h2>
+        <h2 style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800; font-size: clamp(28px, 4.2vw, 46px); line-height: 1.08; letter-spacing: -.03em; margin: 16px 0 0;">Un diagnostic, pas un quiz.</h2>
         <p style="margin: 16px 0 0; font-size: 17px; line-height: 1.65; color: rgba(255,255,255,.72);">Quatre étapes, une chaîne de traitement claire : des réponses honnêtes deviennent une décision argumentée.</p>
       </div>
       <div style="margin-top: 56px; display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; align-items: stretch;">
         <div style="background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: 20px; padding: 24px; position: relative; overflow: hidden;">
           <div style="position: absolute; right: -18px; top: -18px; width: 84px; height: 84px; border-radius: 50%; background: rgba(79,70,229,.35); animation: yPulse 4s ease-in-out infinite;"></div>
-          <div style="font-family: Poppins, sans-serif; font-weight: 800; font-size: 13px; color: #FBBF24; letter-spacing: .12em;">01</div>
-          <div style="font-family: Poppins, sans-serif; font-weight: 700; font-size: 19px; margin-top: 10px;">Questionnaire</div>
+          <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 13px; color: #FBBF24; letter-spacing: .12em;">01</div>
+          <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 19px; margin-top: 10px;">Questionnaire</div>
           <p style="margin: 10px 0 0; font-size: 14px; line-height: 1.6; color: rgba(255,255,255,.66);">Série du BAC, notes par matière, 36 items RIASEC, 15 items de personnalité, compétences perçues, contraintes.</p>
         </div>
         <div style="background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: 20px; padding: 24px; position: relative; overflow: hidden;">
           <div style="position: absolute; right: 12px; top: 12px; width: 56px; height: 56px; animation: yOrbit 9s linear infinite;"><span style="position: absolute; left: 50%; top: 0; width: 8px; height: 8px; border-radius: 50%; background: #7C3AED;"></span><span style="position: absolute; left: 0; top: 50%; width: 6px; height: 6px; border-radius: 50%; background: #4F46E5;"></span><span style="position: absolute; right: 4px; bottom: 6px; width: 5px; height: 5px; border-radius: 50%; background: #FBBF24;"></span></div>
-          <div style="font-family: Poppins, sans-serif; font-weight: 800; font-size: 13px; color: #FBBF24; letter-spacing: .12em;">02</div>
-          <div style="font-family: Poppins, sans-serif; font-weight: 700; font-size: 19px; margin-top: 10px;">Analyse</div>
+          <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 13px; color: #FBBF24; letter-spacing: .12em;">02</div>
+          <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 19px; margin-top: 10px;">Analyse</div>
           <p style="margin: 10px 0 0; font-size: 14px; line-height: 1.6; color: rgba(255,255,255,.66);">Code Holland (top 3), profil de personnalité normalisé, compétences en %, moyennes des matières clés.</p>
         </div>
         <div style="background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: 20px; padding: 24px; position: relative; overflow: hidden;">
           <div style="position: absolute; right: 16px; top: 18px; display: grid; gap: 5px;"><span style="display: block; width: 44px; height: 5px; border-radius: 3px; background: #FBBF24; animation: yBar 1.6s ease-out;"></span><span style="display: block; width: 30px; height: 5px; border-radius: 3px; background: rgba(255,255,255,.4);"></span><span style="display: block; width: 38px; height: 5px; border-radius: 3px; background: rgba(255,255,255,.25);"></span></div>
-          <div style="font-family: Poppins, sans-serif; font-weight: 800; font-size: 13px; color: #FBBF24; letter-spacing: .12em;">03</div>
-          <div style="font-family: Poppins, sans-serif; font-weight: 700; font-size: 19px; margin-top: 10px;">Rapport PDF</div>
+          <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 13px; color: #FBBF24; letter-spacing: .12em;">03</div>
+          <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 19px; margin-top: 10px;">Rapport PDF</div>
           <p style="margin: 10px 0 0; font-size: 14px; line-height: 1.6; color: rgba(255,255,255,.66);">Un bilan d'orientation nominatif : méthodologie, profil, filières classées, écoles, métiers, conseils.</p>
         </div>
         <div style="background: linear-gradient(150deg, rgba(251,191,36,.22), rgba(124,58,237,.18)); border: 1px solid rgba(251,191,36,.35); border-radius: 20px; padding: 24px;">
-          <div style="font-family: Poppins, sans-serif; font-weight: 800; font-size: 13px; color: #FBBF24; letter-spacing: .12em;">04</div>
-          <div style="font-family: Poppins, sans-serif; font-weight: 700; font-size: 19px; margin-top: 10px;">Décision</div>
+          <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 13px; color: #FBBF24; letter-spacing: .12em;">04</div>
+          <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 19px; margin-top: 10px;">Décision</div>
           <p style="margin: 10px 0 0; font-size: 14px; line-height: 1.6; color: rgba(255,255,255,.78);">Une liste courte de filières à défendre, en famille, avant la clôture des affectations.</p>
         </div>
       </div>
@@ -298,28 +298,28 @@
 
   <section id="etapes" data-screen-label="Comment ça marche" data-reveal="1" style="max-width: 1180px; margin: 0 auto; padding: 90px 24px;">
     <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-end; justify-content: space-between;">
-      <h2 style="font-family: Poppins, sans-serif; font-weight: 800; font-size: clamp(28px, 4vw, 44px); line-height: 1.08; letter-spacing: -.025em; margin: 0; max-width: 22em;">Comment ça marche</h2>
-      <div style="font-size: 14px; color: #64748B;">Du paiement au rapport : moins d'une heure.</div>
+      <h2 style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800; font-size: clamp(28px, 4vw, 44px); line-height: 1.08; letter-spacing: -.025em; margin: 0; max-width: 22em;">Comment ça marche</h2>
+      <div style="font-size: 14px; color: #64748B;">De l'inscription au rapport : moins d'une heure.</div>
     </div>
     <div style="margin-top: 44px; display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px;">
       <div style="background: #FFFFFF; border: 1px solid rgba(20,16,43,.08); border-radius: 20px; padding: 26px; transition: transform .2s ease, box-shadow .2s ease;" style-hover="transform: translateY(-4px); box-shadow: 0 18px 40px rgba(20,16,43,.1);">
-        <div style="width: 40px; height: 40px; border-radius: 12px; background: #EEF2FF; color: #4F46E5; display: flex; align-items: center; justify-content: center; font-family: Poppins, sans-serif; font-weight: 800;">1</div>
-        <div style="font-family: Poppins, sans-serif; font-weight: 700; font-size: 18px; margin-top: 16px;">Tu paies {{ prixLabel }}</div>
-        <p style="margin: 10px 0 0; font-size: 14px; line-height: 1.65; color: #64748B;">Mobile money ou carte, en une minute. Accès immédiat au questionnaire.</p>
+        <div style="width: 40px; height: 40px; border-radius: 12px; background: #EEF2FF; color: #4F46E5; display: flex; align-items: center; justify-content: center; font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800;">1</div>
+        <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 18px; margin-top: 16px;">C'est 100 % gratuit</div>
+        <p style="margin: 10px 0 0; font-size: 14px; line-height: 1.65; color: #64748B;">Aucun paiement pendant le lancement. Tu laisses tes coordonnées et tu accèdes au questionnaire.</p>
       </div>
       <div style="background: #FFFFFF; border: 1px solid rgba(20,16,43,.08); border-radius: 20px; padding: 26px; transition: transform .2s ease, box-shadow .2s ease;" style-hover="transform: translateY(-4px); box-shadow: 0 18px 40px rgba(20,16,43,.1);">
-        <div style="width: 40px; height: 40px; border-radius: 12px; background: #EEF2FF; color: #4F46E5; display: flex; align-items: center; justify-content: center; font-family: Poppins, sans-serif; font-weight: 800;">2</div>
-        <div style="font-family: Poppins, sans-serif; font-weight: 700; font-size: 18px; margin-top: 16px;">Tu réponds · 35 min</div>
+        <div style="width: 40px; height: 40px; border-radius: 12px; background: #EEF2FF; color: #4F46E5; display: flex; align-items: center; justify-content: center; font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800;">2</div>
+        <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 18px; margin-top: 16px;">Tu réponds · 35 min</div>
         <p style="margin: 10px 0 0; font-size: 14px; line-height: 1.65; color: #64748B;">Sur téléphone, tranquillement. Aucune bonne ou mauvaise réponse — juste la vérité.</p>
       </div>
       <div style="background: #FFFFFF; border: 1px solid rgba(20,16,43,.08); border-radius: 20px; padding: 26px; transition: transform .2s ease, box-shadow .2s ease;" style-hover="transform: translateY(-4px); box-shadow: 0 18px 40px rgba(20,16,43,.1);">
-        <div style="width: 40px; height: 40px; border-radius: 12px; background: #EEF2FF; color: #4F46E5; display: flex; align-items: center; justify-content: center; font-family: Poppins, sans-serif; font-weight: 800;">3</div>
-        <div style="font-family: Poppins, sans-serif; font-weight: 700; font-size: 18px; margin-top: 16px;">L'analyse tourne</div>
+        <div style="width: 40px; height: 40px; border-radius: 12px; background: #EEF2FF; color: #4F46E5; display: flex; align-items: center; justify-content: center; font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800;">3</div>
+        <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 18px; margin-top: 16px;">L'analyse tourne</div>
         <p style="margin: 10px 0 0; font-size: 14px; line-height: 1.65; color: #64748B;">Scoring psychométrique et croisement avec l'offre de filières officielle 2026.</p>
       </div>
       <div style="background: #FFFFFF; border: 1px solid rgba(20,16,43,.08); border-radius: 20px; padding: 26px; transition: transform .2s ease, box-shadow .2s ease;" style-hover="transform: translateY(-4px); box-shadow: 0 18px 40px rgba(20,16,43,.1);">
-        <div style="width: 40px; height: 40px; border-radius: 12px; background: linear-gradient(135deg, #4F46E5, #7C3AED); color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-family: Poppins, sans-serif; font-weight: 800;">4</div>
-        <div style="font-family: Poppins, sans-serif; font-weight: 700; font-size: 18px; margin-top: 16px;">Tu reçois ton rapport</div>
+        <div style="width: 40px; height: 40px; border-radius: 12px; background: linear-gradient(135deg, #4F46E5, #7C3AED); color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800;">4</div>
+        <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 18px; margin-top: 16px;">Tu reçois ton rapport</div>
         <p style="margin: 10px 0 0; font-size: 14px; line-height: 1.65; color: #64748B;">PDF envoyé sur WhatsApp, e-mail et Telegram. À garder, à imprimer, à partager.</p>
       </div>
     </div>
@@ -330,7 +330,7 @@
       <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-end; justify-content: space-between;">
         <div style="max-width: 32rem;">
           <div style="font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: #7C3AED; font-weight: 700;">Aperçu</div>
-          <h2 style="font-family: Poppins, sans-serif; font-weight: 800; font-size: clamp(28px, 4vw, 44px); line-height: 1.08; letter-spacing: -.025em; margin: 16px 0 0;">Le bilan d'orientation, page par page</h2>
+          <h2 style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800; font-size: clamp(28px, 4vw, 44px); line-height: 1.08; letter-spacing: -.025em; margin: 16px 0 0;">Le bilan d'orientation, page par page</h2>
           <p style="margin: 14px 0 0; font-size: 16px; line-height: 1.65; color: #475569;">Un document nominatif d'une dizaine de pages. Voici les quatre moments clés.</p>
         </div>
         <div style="display: flex; gap: 10px;">
@@ -342,19 +342,19 @@
       <div ref="{{ railRef }}" class="no-bar" style="margin-top: 40px; display: flex; gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding: 6px 0 18px;">
         <div style="flex: none; width: min(400px, 82vw); scroll-snap-align: center; background: #0C0828; color: #FFFFFF; border-radius: 18px; padding: 40px 34px; aspect-ratio: 3/4; box-shadow: 0 22px 50px rgba(20,16,43,.22); display: flex; flex-direction: column;">
           <div style="display: flex; align-items: center; gap: 9px;">
-            <img src="mark.png" alt="" style="width: 30px; height: 30px; display: block;" />
-            <span style="font-family: Poppins, sans-serif; font-weight: 800; letter-spacing: .1em; font-size: 13px;">YEDIDIA</span>
+            <img src="assets/mark.png" alt="" style="width: 30px; height: 30px; display: block;" />
+            <span style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800; letter-spacing: .1em; font-size: 13px;">YEDIDIA</span>
           </div>
           <div style="flex: 1;"></div>
           <div style="font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: #FBBF24; font-weight: 700;">Bilan d'orientation</div>
-          <div style="font-family: Poppins, sans-serif; font-weight: 800; font-size: 32px; line-height: 1.1; margin-top: 10px;">Bilan d'orientation personnalisé</div>
+          <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 32px; line-height: 1.1; margin-top: 10px;">Bilan d'orientation personnalisé</div>
           <div style="margin-top: 22px; font-size: 14px; color: rgba(255,255,255,.7); line-height: 1.8;">Candidat · <strong style="color: #fff;">Koffi A.</strong><br />Série · <strong style="color: #fff;">D</strong><br />Édité le 12 juillet 2026</div>
           <div style="margin-top: 24px; font-size: 11px; color: rgba(255,255,255,.45); line-height: 1.6;">Document confidentiel — aide à la réflexion, ni décision ni jugement.</div>
         </div>
 
         <div style="flex: none; width: min(400px, 82vw); scroll-snap-align: center; background: #FFFFFF; border-radius: 18px; padding: 36px 32px; aspect-ratio: 3/4; box-shadow: 0 22px 50px rgba(20,16,43,.14); display: flex; flex-direction: column;">
           <div style="font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: #94A3B8; font-weight: 700;">Section 3</div>
-          <div style="font-family: Poppins, sans-serif; font-weight: 800; font-size: 22px; margin-top: 8px;">Ton profil d'intérêts</div>
+          <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 22px; margin-top: 8px;">Ton profil d'intérêts</div>
           <div style="margin-top: 6px; font-size: 13px; color: #64748B;">Code Holland : <strong style="color: #4F46E5;">R · I · E</strong></div>
           <div style="margin-top: 22px; display: grid; gap: 13px;">
             <div><div style="display: flex; justify-content: space-between; font-size: 12px; font-weight: 600;"><span>Réaliste</span><span style="color: #64748B;">88 %</span></div><div style="height: 8px; border-radius: 4px; background: #F1F0F6; margin-top: 5px;"><div style="height: 8px; width: 88%; border-radius: 4px; background: linear-gradient(90deg, #4F46E5, #7C3AED);"></div></div></div>
@@ -370,7 +370,7 @@
 
         <div style="flex: none; width: min(400px, 82vw); scroll-snap-align: center; background: #FFFFFF; border-radius: 18px; padding: 36px 32px; aspect-ratio: 3/4; box-shadow: 0 22px 50px rgba(20,16,43,.14); display: flex; flex-direction: column;">
           <div style="font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: #94A3B8; font-weight: 700;">Section 6</div>
-          <div style="font-family: Poppins, sans-serif; font-weight: 800; font-size: 22px; margin-top: 8px;">Tes filières, deux lectures</div>
+          <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 22px; margin-top: 8px;">Tes filières, deux lectures</div>
           <div style="margin-top: 20px; border: 1px solid rgba(20,16,43,.1); border-radius: 14px; overflow: hidden;">
             <div style="background: #EEF2FF; padding: 10px 14px; font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #4F46E5;">A · Selon tes intérêts</div>
             <div style="padding: 12px 14px; display: grid; gap: 9px; font-size: 13px;">
@@ -393,7 +393,7 @@
 
         <div style="flex: none; width: min(400px, 82vw); scroll-snap-align: center; background: #FFFFFF; border-radius: 18px; padding: 36px 32px; aspect-ratio: 3/4; box-shadow: 0 22px 50px rgba(20,16,43,.14); display: flex; flex-direction: column;">
           <div style="font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: #94A3B8; font-weight: 700;">Section 8</div>
-          <div style="font-family: Poppins, sans-serif; font-weight: 800; font-size: 22px; margin-top: 8px;">Où postuler & prochaines étapes</div>
+          <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 22px; margin-top: 8px;">Où postuler & prochaines étapes</div>
           <div style="margin-top: 20px; display: grid; gap: 12px;">
             <div style="border-left: 3px solid #4F46E5; padding: 4px 0 4px 14px;"><div style="font-size: 14px; font-weight: 700;">Établissements à viser</div><div style="font-size: 12px; color: #64748B; line-height: 1.6; margin-top: 4px;">Universités publiques et grandes écoles compatibles avec la série D, par ordre de pertinence.</div></div>
             <div style="border-left: 3px solid #7C3AED; padding: 4px 0 4px 14px;"><div style="font-size: 14px; font-weight: 700;">Métiers en aval</div><div style="font-size: 12px; color: #64748B; line-height: 1.6; margin-top: 4px;">Ce que ces filières permettent réellement d'exercer en Côte d'Ivoire.</div></div>
@@ -408,36 +408,36 @@
   </section>
 
   <section data-screen-label="Ce que vous recevez" data-reveal="1" style="max-width: 1180px; margin: 0 auto; padding: 90px 24px;">
-    <h2 style="font-family: Poppins, sans-serif; font-weight: 800; font-size: clamp(28px, 4vw, 44px); line-height: 1.08; letter-spacing: -.025em; margin: 0; max-width: 24em;">Ce que contient votre {{ prixLabel }}</h2>
+    <h2 style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800; font-size: clamp(28px, 4vw, 44px); line-height: 1.08; letter-spacing: -.025em; margin: 0; max-width: 24em;">Ce que contient votre {{ prixLabel }}</h2>
     <div style="margin-top: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px;">
       <div style="background: #FFFFFF; border: 1px solid rgba(20,16,43,.08); border-radius: 20px; padding: 26px;">
         <div style="font-size: 20px;">🧭</div>
-        <div style="font-family: Poppins, sans-serif; font-weight: 700; font-size: 17px; margin-top: 12px;">Votre code Holland</div>
+        <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 17px; margin-top: 12px;">Votre code Holland</div>
         <p style="margin: 8px 0 0; font-size: 14px; line-height: 1.65; color: #64748B;">Les trois dimensions d'intérêt dominantes, interprétées en langage clair.</p>
       </div>
       <div style="background: #FFFFFF; border: 1px solid rgba(20,16,43,.08); border-radius: 20px; padding: 26px;">
         <div style="font-size: 20px;">🧠</div>
-        <div style="font-family: Poppins, sans-serif; font-weight: 700; font-size: 17px; margin-top: 12px;">Profil de personnalité</div>
+        <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 17px; margin-top: 12px;">Profil de personnalité</div>
         <p style="margin: 8px 0 0; font-size: 14px; line-height: 1.65; color: #64748B;">Cinq grands traits mesurés, et ce qu'ils impliquent sur la façon d'étudier.</p>
       </div>
       <div style="background: #FFFFFF; border: 1px solid rgba(20,16,43,.08); border-radius: 20px; padding: 26px;">
         <div style="font-size: 20px;">📊</div>
-        <div style="font-family: Poppins, sans-serif; font-weight: 700; font-size: 17px; margin-top: 12px;">Deux classements de filières</div>
+        <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 17px; margin-top: 12px;">Deux classements de filières</div>
         <p style="margin: 8px 0 0; font-size: 14px; line-height: 1.65; color: #64748B;">Ce qui vous attire, et ce que vos résultats permettent aujourd'hui. Sans complaisance et sans culpabilisation.</p>
       </div>
       <div style="background: #FFFFFF; border: 1px solid rgba(20,16,43,.08); border-radius: 20px; padding: 26px;">
         <div style="font-size: 20px;">🎓</div>
-        <div style="font-family: Poppins, sans-serif; font-weight: 700; font-size: 17px; margin-top: 12px;">Écoles & universités</div>
+        <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 17px; margin-top: 12px;">Écoles & universités</div>
         <p style="margin: 8px 0 0; font-size: 14px; line-height: 1.65; color: #64748B;">Établissements compatibles avec votre série, dans l'offre officielle 2026.</p>
       </div>
       <div style="background: #FFFFFF; border: 1px solid rgba(20,16,43,.08); border-radius: 20px; padding: 26px;">
         <div style="font-size: 20px;">💼</div>
-        <div style="font-family: Poppins, sans-serif; font-weight: 700; font-size: 17px; margin-top: 12px;">Métiers en aval</div>
+        <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 17px; margin-top: 12px;">Métiers en aval</div>
         <p style="margin: 8px 0 0; font-size: 14px; line-height: 1.65; color: #64748B;">Les débouchés concrets de chaque filière recommandée.</p>
       </div>
       <div style="background: linear-gradient(150deg, #4F46E5, #7C3AED); color: #FFFFFF; border-radius: 20px; padding: 26px;">
         <div style="font-size: 20px;">📲</div>
-        <div style="font-family: Poppins, sans-serif; font-weight: 700; font-size: 17px; margin-top: 12px;">Livré sur vos canaux</div>
+        <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 17px; margin-top: 12px;">Livré sur vos canaux</div>
         <p style="margin: 8px 0 0; font-size: 14px; line-height: 1.65; color: rgba(255,255,255,.82);">Le PDF arrive sur WhatsApp, par e-mail et sur Telegram. Vous le gardez à vie.</p>
       </div>
     </div>
@@ -447,13 +447,13 @@
     <section data-screen-label="Parents (direction B)" data-reveal="1" style="background: #FFFFFF; border-top: 1px solid rgba(20,16,43,.06); border-bottom: 1px solid rgba(20,16,43,.06);">
       <div style="max-width: 1180px; margin: 0 auto; padding: 64px 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 34px; align-items: center;">
         <div style="border-radius: 20px; overflow: hidden; box-shadow: 0 20px 46px rgba(20,16,43,.14);">
-          <img src="photo-parents.jpg" alt="Une mère et son fils consultent le test d'orientation" style="width: 100%; display: block; aspect-ratio: 16/10; object-fit: cover; object-position: 55% 45%;" />
+          <img src="assets/photo-parents.jpg" alt="Une mère et son fils consultent le test d'orientation" style="width: 100%; display: block; aspect-ratio: 16/10; object-fit: cover; object-position: 55% 45%;" />
         </div>
         <div>
           <div style="font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: #4F46E5; font-weight: 700;">À montrer à vos parents</div>
-          <h2 style="font-family: Poppins, sans-serif; font-weight: 800; font-size: clamp(24px, 3.4vw, 34px); line-height: 1.12; letter-spacing: -.02em; margin: 14px 0 0;">Ils financent. Ils ont droit à un document sérieux.</h2>
+          <h2 style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800; font-size: clamp(24px, 3.4vw, 34px); line-height: 1.12; letter-spacing: -.02em; margin: 14px 0 0;">Ils financent. Ils ont droit à un document sérieux.</h2>
           <p style="margin: 14px 0 0; font-size: 15px; line-height: 1.7; color: #475569;">Le rapport est écrit pour être lu en famille : méthodologie expliquée, arguments posés, aucune décision imposée. C'est une base de discussion, pas un verdict.</p>
-          <button onClick="{{ openPay }}" style="margin-top: 22px; border: 0; cursor: pointer; font-family: Inter, sans-serif; font-weight: 700; font-size: 15px; color: #14102B; background: #FBBF24; padding: 14px 22px; border-radius: 999px;">Offrir le diagnostic — {{ prixLabel }}</button>
+          <button onClick="{{ openPay }}" style="margin-top: 22px; border: 0; cursor: pointer; font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 15px; color: #14102B; background: #FBBF24; padding: 14px 22px; border-radius: 999px;">Offrir le diagnostic — gratuit</button>
         </div>
       </div>
     </section>
@@ -464,17 +464,17 @@
       <div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-end; justify-content: space-between;">
         <div style="max-width: 34rem;">
           <div style="font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: #7C3AED; font-weight: 700;">Filières</div>
-          <h2 style="font-family: Poppins, sans-serif; font-weight: 800; font-size: clamp(28px, 4vw, 44px); line-height: 1.08; letter-spacing: -.025em; margin: 16px 0 0;">Les filières accessibles selon votre série</h2>
+          <h2 style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800; font-size: clamp(28px, 4vw, 44px); line-height: 1.08; letter-spacing: -.025em; margin: 16px 0 0;">Les filières accessibles selon votre série</h2>
           <p style="margin: 14px 0 0; font-size: 16px; line-height: 1.7; color: #475569;">Le diagnostic ne propose que des filières compatibles avec la série obtenue au BAC. Voici un aperçu — le rapport, lui, les classe pour vous.</p>
         </div>
         <div style="display: flex; flex-wrap: wrap; gap: 8px;">
           <sc-for list="{{ series }}" as="s" hint-placeholder-count="6">
-            <button onClick="{{ s.pick }}" style="cursor: pointer; font-family: Poppins, sans-serif; font-weight: 800; font-size: 15px; width: 46px; height: 46px; border-radius: 14px; background: {{ s.bg }}; color: {{ s.fg }}; border: 1px solid {{ s.bd }}; transition: transform .15s ease;" style-hover="transform: translateY(-2px);">{{ s.code }}</button>
+            <button onClick="{{ s.pick }}" style="cursor: pointer; font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 15px; width: 46px; height: 46px; border-radius: 14px; background: {{ s.bg }}; color: {{ s.fg }}; border: 1px solid {{ s.bd }}; transition: transform .15s ease;" style-hover="transform: translateY(-2px);">{{ s.code }}</button>
           </sc-for>
         </div>
       </div>
       <div style="margin-top: 20px; display: flex; flex-wrap: wrap; gap: 14px; align-items: center; padding: 16px 18px; border-radius: 16px; background: #FFFFFF; border: 1px solid rgba(20,16,43,.08);">
-        <span style="flex: none; font-family: Poppins, sans-serif; font-weight: 800; font-size: 13px; color: #4F46E5; background: #EEF2FF; padding: 6px 12px; border-radius: 999px;">BAC {{ serie }} · {{ nbFilieres }} filières</span>
+        <span style="flex: none; font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 13px; color: #4F46E5; background: #EEF2FF; padding: 6px 12px; border-radius: 999px;">BAC {{ serie }} · {{ nbFilieres }} filières</span>
         <span style="flex: 1; min-width: 260px; font-size: 14px; line-height: 1.65; color: #475569;">{{ noteSerie }}</span>
       </div>
       <div style="margin-top: 24px; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px;">
@@ -488,23 +488,23 @@
           </div>
         </sc-for>
       </div>
-      <p style="margin: 26px 0 0; font-size: 13px; line-height: 1.7; color: #64748B; max-width: 46em;">Liste indicative, à titre d'illustration. La référence officielle des filières, capacités d'accueil et conditions d'admission reste l'offre de formation publiée par le ministère sur <a href="https://bac.mesrs-ci.net" target="_blank" rel="noopener">bac.mesrs-ci.net</a>.</p>
+      <p style="margin: 26px 0 0; font-size: 13px; line-height: 1.7; color: #64748B; max-width: 46em;">Liste indicative, à titre d'illustration. La référence officielle des filières, capacités d'accueil et conditions d'admission reste l'offre de formation publiée par le ministère sur <a href="https://bac.mesrs-ci.net" target="_blank" rel="noopener noreferrer">bac.mesrs-ci.net</a>.</p>
     </div>
   </section>
 
   <section id="actualites" data-screen-label="Actualités" data-reveal="1" style="max-width: 1180px; margin: 0 auto; padding: 90px 24px;">
     <div style="max-width: 36rem;">
       <div style="font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: #7C3AED; font-weight: 700;">Actualités</div>
-      <h2 style="font-family: Poppins, sans-serif; font-weight: 800; font-size: clamp(28px, 4vw, 44px); line-height: 1.08; letter-spacing: -.025em; margin: 16px 0 0;">Le programme officiel du ministère</h2>
+      <h2 style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800; font-size: clamp(28px, 4vw, 44px); line-height: 1.08; letter-spacing: -.025em; margin: 16px 0 0;">Le programme officiel du ministère</h2>
       <p style="margin: 14px 0 0; font-size: 16px; line-height: 1.7; color: #475569;">Orientation, affectations et offre de formation sont publiées par le Ministère de l'Enseignement Supérieur et de la Recherche Scientifique. Nous ne dupliquons pas ces informations : nous vous envoyons à la source.</p>
     </div>
 
-    <a href="https://bac.mesrs-ci.net" target="_blank" rel="noopener" style="margin-top: 34px; display: block; border-radius: 22px; overflow: hidden; background: #0C0828; color: #FFFFFF; position: relative;">
+    <a href="https://bac.mesrs-ci.net" target="_blank" rel="noopener noreferrer" style="margin-top: 34px; display: block; border-radius: 22px; overflow: hidden; background: #0C0828; color: #FFFFFF; position: relative;">
       <div style="position: absolute; inset: 0; background: radial-gradient(600px 300px at 85% 0%, rgba(124,58,237,.5), transparent 62%);"></div>
       <div style="position: relative; padding: 34px; display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between;">
         <div style="max-width: 34rem;">
           <div style="font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: #FBBF24; font-weight: 700;">Source officielle</div>
-          <div style="font-family: Poppins, sans-serif; font-weight: 800; font-size: clamp(22px, 3vw, 30px); line-height: 1.15; margin-top: 10px; color: #FFFFFF;">Plateforme d'orientation et d'affectation — MESRS</div>
+          <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800; font-size: clamp(22px, 3vw, 30px); line-height: 1.15; margin-top: 10px; color: #FFFFFF;">Plateforme d'orientation et d'affectation — MESRS</div>
           <div style="margin-top: 10px; font-size: 15px; color: rgba(255,255,255,.72); line-height: 1.6;">Offre de formation, capacités d'accueil, calendrier des affectations et résultats officiels.</div>
         </div>
         <div style="display: inline-flex; align-items: center; gap: 10px; background: #FBBF24; color: #14102B; font-weight: 700; font-size: 15px; padding: 15px 24px; border-radius: 999px;">bac.mesrs-ci.net →</div>
@@ -512,27 +512,27 @@
     </a>
 
     <div style="margin-top: 18px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px;">
-      <a href="https://bac.mesrs-ci.net" target="_blank" rel="noopener" style="background: #FFFFFF; border: 1px solid rgba(20,16,43,.08); border-radius: 18px; padding: 24px; color: inherit; display: block; transition: transform .18s ease, box-shadow .18s ease;" style-hover="transform: translateY(-3px); box-shadow: 0 16px 36px rgba(20,16,43,.1);">
+      <a href="https://bac.mesrs-ci.net" target="_blank" rel="noopener noreferrer" style="background: #FFFFFF; border: 1px solid rgba(20,16,43,.08); border-radius: 18px; padding: 24px; color: inherit; display: block; transition: transform .18s ease, box-shadow .18s ease;" style-hover="transform: translateY(-3px); box-shadow: 0 16px 36px rgba(20,16,43,.1);">
         <div style="font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: #4F46E5; font-weight: 700;">Programme</div>
-        <div style="font-family: Poppins, sans-serif; font-weight: 700; font-size: 17px; margin-top: 10px;">Offre de formation 2026</div>
+        <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 17px; margin-top: 10px;">Offre de formation 2026</div>
         <p style="margin: 8px 0 0; font-size: 14px; line-height: 1.65; color: #64748B;">Universités publiques, grandes écoles et instituts, filière par filière, avec les séries admises et les capacités d'accueil.</p>
         <div style="margin-top: 14px; font-size: 13px; font-weight: 600; color: #4F46E5;">Consulter sur le site du ministère →</div>
       </a>
-      <a href="https://orientationsup.net" target="_blank" rel="noopener" style="background: #FFFFFF; border: 1px solid rgba(20,16,43,.08); border-radius: 18px; padding: 24px; color: inherit; display: block; transition: transform .18s ease, box-shadow .18s ease;" style-hover="transform: translateY(-3px); box-shadow: 0 16px 36px rgba(20,16,43,.1);">
+      <a href="https://orientationsup.net" target="_blank" rel="noopener noreferrer" style="background: #FFFFFF; border: 1px solid rgba(20,16,43,.08); border-radius: 18px; padding: 24px; color: inherit; display: block; transition: transform .18s ease, box-shadow .18s ease;" style-hover="transform: translateY(-3px); box-shadow: 0 16px 36px rgba(20,16,43,.1);">
         <div style="font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: #4F46E5; font-weight: 700;">Préinscription</div>
-        <div style="font-family: Poppins, sans-serif; font-weight: 700; font-size: 17px; margin-top: 10px;">orientationsup.net</div>
+        <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 17px; margin-top: 10px;">orientationsup.net</div>
         <p style="margin: 8px 0 0; font-size: 14px; line-height: 1.65; color: #64748B;">La préinscription en ligne est obligatoire pour tout nouveau bachelier, public comme grandes écoles privées agréées. Le ministère recommande de la faire soi-même.</p>
         <div style="margin-top: 14px; font-size: 13px; font-weight: 600; color: #4F46E5;">Faire sa préinscription →</div>
       </a>
-      <a href="https://bac.mesrs-ci.net" target="_blank" rel="noopener" style="background: #FFFFFF; border: 1px solid rgba(20,16,43,.08); border-radius: 18px; padding: 24px; color: inherit; display: block; transition: transform .18s ease, box-shadow .18s ease;" style-hover="transform: translateY(-3px); box-shadow: 0 16px 36px rgba(20,16,43,.1);">
+      <a href="https://bac.mesrs-ci.net" target="_blank" rel="noopener noreferrer" style="background: #FFFFFF; border: 1px solid rgba(20,16,43,.08); border-radius: 18px; padding: 24px; color: inherit; display: block; transition: transform .18s ease, box-shadow .18s ease;" style-hover="transform: translateY(-3px); box-shadow: 0 16px 36px rgba(20,16,43,.1);">
         <div style="font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: #4F46E5; font-weight: 700;">Résultats</div>
-        <div style="font-family: Poppins, sans-serif; font-weight: 700; font-size: 17px; margin-top: 10px;">Résultats & affectations</div>
+        <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 17px; margin-top: 10px;">Résultats & affectations</div>
         <p style="margin: 8px 0 0; font-size: 14px; line-height: 1.65; color: #64748B;">Résultats du BAC et affectations sont consultables sur la plateforme officielle, avec votre matricule.</p>
         <div style="margin-top: 14px; font-size: 13px; font-weight: 600; color: #4F46E5;">Accéder à la plateforme →</div>
       </a>
       <div style="border: 1px dashed rgba(79,70,229,.35); border-radius: 18px; padding: 24px; background: #F8F7FD; display: flex; flex-direction: column; justify-content: center;">
         <div style="font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: #4F46E5; font-weight: 700;">Emplacement réservé</div>
-        <div style="font-family: Poppins, sans-serif; font-weight: 700; font-size: 17px; margin-top: 10px;">Nos annonces YEDIDIA</div>
+        <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 17px; margin-top: 10px;">Nos annonces YEDIDIA</div>
         <p style="margin: 8px 0 0; font-size: 14px; line-height: 1.65; color: #64748B;">Communiqués, ateliers d'orientation dans les lycées et nouveautés du diagnostic s'afficheront ici.</p>
       </div>
     </div>
@@ -540,61 +540,61 @@
       <div style="font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: #7C3AED; font-weight: 700;">Session 2026 — à retenir</div>
       <div style="margin-top: 18px; display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 20px;">
         <div>
-          <div style="font-family: Poppins, sans-serif; font-weight: 800; font-size: 26px;">16 août</div>
+          <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 26px;">16 août</div>
           <p style="margin: 6px 0 0; font-size: 13.5px; line-height: 1.6; color: #64748B;">Clôture des préinscriptions, ouvertes depuis le 17 juillet 2026. Passé ce délai, plus d'orientation pour l'année en cours.</p>
         </div>
         <div>
-          <div style="font-family: Poppins, sans-serif; font-weight: 800; font-size: 26px;">122 360</div>
+          <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 26px;">122 360</div>
           <p style="margin: 6px 0 0; font-size: 13.5px; line-height: 1.6; color: #64748B;">Nouveaux bacheliers admis à la session 2026, pour un taux de réussite national de 40,60 %.</p>
         </div>
         <div>
-          <div style="font-family: Poppins, sans-serif; font-weight: 800; font-size: 26px;">23 ans</div>
+          <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 26px;">23 ans</div>
           <p style="margin: 6px 0 0; font-size: 13.5px; line-height: 1.6; color: #64748B;">Limite d'âge pour l'orientation dans le public. Au-delà, l'orientation se fait vers les grandes écoles privées agréées.</p>
         </div>
         <div>
-          <div style="font-family: Poppins, sans-serif; font-weight: 800; font-size: 26px;">JOB</div>
+          <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 26px;">JOB</div>
           <p style="margin: 6px 0 0; font-size: 13.5px; line-height: 1.6; color: #64748B;">Les Journées de l'Orientation du Bachelier, organisées à l'université Félix Houphouët-Boigny de Cocody. Entrée gratuite.</p>
         </div>
       </div>
     </div>
-    <p style="margin: 22px 0 0; font-size: 12.5px; line-height: 1.7; color: #94A3B8;">Informations publiques relayées à titre indicatif (sources : MESRS, presse ivoirienne, juillet 2026) — vérifiez toujours sur <a href="https://bac.mesrs-ci.net" target="_blank" rel="noopener">bac.mesrs-ci.net</a>. YEDIDIA est un service privé, indépendant du ministère : les informations officielles font toujours foi.</p>
+    <p style="margin: 22px 0 0; font-size: 12.5px; line-height: 1.7; color: #94A3B8;">Informations publiques relayées à titre indicatif (sources : MESRS, presse ivoirienne, juillet 2026) — vérifiez toujours sur <a href="https://bac.mesrs-ci.net" target="_blank" rel="noopener noreferrer">bac.mesrs-ci.net</a>. YEDIDIA est un service privé, indépendant du ministère : les informations officielles font toujours foi.</p>
   </section>
 
   <section id="methode" data-screen-label="Pourquoi nous faire confiance" data-reveal="1" style="max-width: 1180px; margin: 0 auto; padding: 90px 24px;">
     <div style="max-width: 34rem;">
       <div style="font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: #7C3AED; font-weight: 700;">Méthode & sources</div>
-      <h2 style="font-family: Poppins, sans-serif; font-weight: 800; font-size: clamp(28px, 4vw, 44px); line-height: 1.08; letter-spacing: -.025em; margin: 16px 0 0;">Pourquoi vous pouvez faire confiance à ce rapport</h2>
+      <h2 style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800; font-size: clamp(28px, 4vw, 44px); line-height: 1.08; letter-spacing: -.025em; margin: 16px 0 0;">Pourquoi vous pouvez faire confiance à ce rapport</h2>
       <p style="margin: 14px 0 0; font-size: 16px; line-height: 1.7; color: #475569;">Nous ne publions pas encore de témoignages : YEDIDIA lance son premier produit. À la place, voici exactement ce sur quoi le diagnostic repose.</p>
     </div>
     <div style="margin-top: 44px; display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 18px;">
       <div style="border: 1px solid rgba(20,16,43,.08); border-radius: 20px; padding: 26px; background: #FFFFFF;">
-        <div style="font-family: Poppins, sans-serif; font-weight: 800; font-size: 13px; color: #4F46E5; letter-spacing: .12em;">01</div>
-        <div style="font-family: Poppins, sans-serif; font-weight: 700; font-size: 18px; margin-top: 10px;">Psychométrie établie</div>
+        <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 13px; color: #4F46E5; letter-spacing: .12em;">01</div>
+        <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 18px; margin-top: 10px;">Psychométrie établie</div>
         <p style="margin: 10px 0 0; font-size: 14px; line-height: 1.65; color: #64748B;">Deux modèles largement utilisés en orientation : les intérêts professionnels (typologie RIASEC / Holland) et les cinq grands traits de personnalité. 36 + 15 items, dont des items inversés pour limiter les réponses automatiques.</p>
       </div>
       <div style="border: 1px solid rgba(20,16,43,.08); border-radius: 20px; padding: 26px; background: #FFFFFF;">
-        <div style="font-family: Poppins, sans-serif; font-weight: 800; font-size: 13px; color: #4F46E5; letter-spacing: .12em;">02</div>
-        <div style="font-family: Poppins, sans-serif; font-weight: 700; font-size: 18px; margin-top: 10px;">Filières officielles 2026</div>
-        <p style="margin: 10px 0 0; font-size: 14px; line-height: 1.65; color: #64748B;">Les filières et compatibilités de séries sont calées sur l'offre publiée par le ministère : <a href="https://bac.mesrs-ci.net" target="_blank" rel="noopener">bac.mesrs-ci.net</a>. Pas de filière inventée, pas d'école fantôme.</p>
+        <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 13px; color: #4F46E5; letter-spacing: .12em;">02</div>
+        <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 18px; margin-top: 10px;">Filières officielles 2026</div>
+        <p style="margin: 10px 0 0; font-size: 14px; line-height: 1.65; color: #64748B;">Les filières et compatibilités de séries sont calées sur l'offre publiée par le ministère : <a href="https://bac.mesrs-ci.net" target="_blank" rel="noopener noreferrer">bac.mesrs-ci.net</a>. Pas de filière inventée, pas d'école fantôme.</p>
       </div>
       <div style="border: 1px solid rgba(20,16,43,.08); border-radius: 20px; padding: 26px; background: #FFFFFF;">
-        <div style="font-family: Poppins, sans-serif; font-weight: 800; font-size: 13px; color: #4F46E5; letter-spacing: .12em;">03</div>
-        <div style="font-family: Poppins, sans-serif; font-weight: 700; font-size: 18px; margin-top: 10px;">Une pondération assumée</div>
+        <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 13px; color: #4F46E5; letter-spacing: .12em;">03</div>
+        <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 18px; margin-top: 10px;">Une pondération assumée</div>
         <p style="margin: 10px 0 0; font-size: 14px; line-height: 1.65; color: #64748B;">Le classement réaliste combine 60 % d'affinité d'intérêt et 40 % de moyennes des matières clés. La formule est écrite noir sur blanc dans le rapport, section méthodologie.</p>
       </div>
       <div style="border: 1px solid rgba(20,16,43,.08); border-radius: 20px; padding: 26px; background: #FFFFFF;">
-        <div style="font-family: Poppins, sans-serif; font-weight: 800; font-size: 13px; color: #4F46E5; letter-spacing: .12em;">04</div>
-        <div style="font-family: Poppins, sans-serif; font-weight: 700; font-size: 18px; margin-top: 10px;">Confidentialité stricte</div>
+        <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 13px; color: #4F46E5; letter-spacing: .12em;">04</div>
+        <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 18px; margin-top: 10px;">Confidentialité stricte</div>
         <p style="margin: 10px 0 0; font-size: 14px; line-height: 1.65; color: #64748B;">Les réponses ne sont jamais envoyées à des services tiers de mise en forme. Le rapport est généré dans notre environnement, puis remis au candidat et à sa famille.</p>
       </div>
       <div style="border: 1px solid rgba(20,16,43,.08); border-radius: 20px; padding: 26px; background: #FFFFFF;">
-        <div style="font-family: Poppins, sans-serif; font-weight: 800; font-size: 13px; color: #4F46E5; letter-spacing: .12em;">05</div>
-        <div style="font-family: Poppins, sans-serif; font-weight: 700; font-size: 18px; margin-top: 10px;">Une aide, pas un verdict</div>
+        <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 13px; color: #4F46E5; letter-spacing: .12em;">05</div>
+        <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 18px; margin-top: 10px;">Une aide, pas un verdict</div>
         <p style="margin: 10px 0 0; font-size: 14px; line-height: 1.65; color: #64748B;">Le rapport est une aide à la réflexion. Il ne remplace ni la décision de la famille, ni l'affectation officielle.</p>
       </div>
       <div style="border: 1px dashed rgba(79,70,229,.35); border-radius: 20px; padding: 26px; background: #F8F7FD; display: flex; flex-direction: column; justify-content: center;">
         <div style="font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: #4F46E5; font-weight: 700;">Emplacement réservé</div>
-        <div style="font-family: Poppins, sans-serif; font-weight: 700; font-size: 17px; margin-top: 10px;">Ils nous feront confiance</div>
+        <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 17px; margin-top: 10px;">Ils nous feront confiance</div>
         <p style="margin: 8px 0 0; font-size: 14px; line-height: 1.65; color: #64748B;">Retours de familles, lycées partenaires et mentions presse s'afficheront ici dès les premiers bilans remis.</p>
       </div>
     </div>
@@ -602,7 +602,7 @@
 
   <section id="faq" data-screen-label="FAQ" data-reveal="1" style="background: #FFFFFF; border-top: 1px solid rgba(20,16,43,.06);">
     <div style="max-width: 860px; margin: 0 auto; padding: 88px 24px;">
-      <h2 style="font-family: Poppins, sans-serif; font-weight: 800; font-size: clamp(28px, 4vw, 44px); line-height: 1.08; letter-spacing: -.025em; margin: 0;">Questions fréquentes</h2>
+      <h2 style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800; font-size: clamp(28px, 4vw, 44px); line-height: 1.08; letter-spacing: -.025em; margin: 0;">Questions fréquentes</h2>
       <div style="margin-top: 36px; display: grid; gap: 2px;">
         <details style="border-bottom: 1px solid rgba(20,16,43,.09); padding: 20px 0;">
           <summary style="display: flex; gap: 16px; align-items: center; font-size: 17px; font-weight: 600;"><span style="flex: 1;">Est-ce que ça remplace l'affectation officielle ?</span><span class="faq-plus" style="flex: none; font-size: 20px; color: #4F46E5; transition: transform .2s ease;">+</span></summary>
@@ -625,8 +625,8 @@
           <p style="margin: 14px 0 0; font-size: 15px; line-height: 1.7; color: #475569;">Oui : A, C, D, E, F, G et les autres séries de l'examen ivoirien. Les filières proposées sont filtrées selon la compatibilité avec votre série.</p>
         </details>
         <details style="border-bottom: 1px solid rgba(20,16,43,.09); padding: 20px 0;">
-          <summary style="display: flex; gap: 16px; align-items: center; font-size: 17px; font-weight: 600;"><span style="flex: 1;">Comment payer les {{ prixLabel }} ?</span><span class="faq-plus" style="flex: none; font-size: 20px; color: #4F46E5; transition: transform .2s ease;">+</span></summary>
-          <p style="margin: 14px 0 0; font-size: 15px; line-height: 1.7; color: #475569;">Par <strong>CinetPay</strong> : Wave, Orange Money, MTN MoMo, Moov Money ou carte bancaire. Le paiement se fait avant le questionnaire, en une minute, sur une page sécurisée.</p>
+          <summary style="display: flex; gap: 16px; align-items: center; font-size: 17px; font-weight: 600;"><span style="flex: 1;">Le diagnostic est-il vraiment gratuit ?</span><span class="faq-plus" style="flex: none; font-size: 20px; color: #4F46E5; transition: transform .2s ease;">+</span></summary>
+          <p style="margin: 14px 0 0; font-size: 15px; line-height: 1.7; color: #475569;">Oui. Pendant la phase de lancement, le diagnostic complet est offert : <strong>0 FCFA</strong>, sans carte bancaire ni mobile money. Vous laissez seulement les coordonnées où recevoir le rapport.</p>
         </details>
         <details style="border-bottom: 1px solid rgba(20,16,43,.09); padding: 20px 0;">
           <summary style="display: flex; gap: 16px; align-items: center; font-size: 17px; font-weight: 600;"><span style="flex: 1;">Mon enfant est mineur, est-ce autorisé ?</span><span class="faq-plus" style="flex: none; font-size: 20px; color: #4F46E5; transition: transform .2s ease;">+</span></summary>
@@ -651,25 +651,25 @@
   <section data-screen-label="CTA final" data-reveal="1" style="background: #0C0828; color: #FFFFFF; position: relative; overflow: hidden;">
     <div style="position: absolute; inset: 0; background: radial-gradient(760px 420px at 30% 110%, rgba(124,58,237,.5), transparent 60%), radial-gradient(600px 340px at 88% -10%, rgba(251,191,36,.22), transparent 60%);"></div>
     <div style="position: relative; max-width: 900px; margin: 0 auto; padding: 100px 24px; text-align: center;">
-      <h2 style="font-family: Poppins, sans-serif; font-weight: 800; font-size: clamp(30px, 5.2vw, 56px); line-height: 1.04; letter-spacing: -.03em; margin: 0;">Une décision qui pèse dix ans.<br />Trente-cinq minutes pour la préparer.</h2>
-      <p style="margin: 20px auto 0; font-size: 17px; line-height: 1.7; color: rgba(255,255,255,.74); max-width: 34em;">{{ prixLabel }} une fois, au lieu de {{ prixPleinLabel }}. Un bilan d'orientation personnalisé, livré sur WhatsApp, e-mail et Telegram.</p>
+      <h2 style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800; font-size: clamp(30px, 5.2vw, 56px); line-height: 1.04; letter-spacing: -.03em; margin: 0;">Une décision qui pèse dix ans.<br />Trente-cinq minutes pour la préparer.</h2>
+      <p style="margin: 20px auto 0; font-size: 17px; line-height: 1.7; color: rgba(255,255,255,.74); max-width: 34em;">Gratuit pendant le lancement, au lieu de {{ prixPleinLabel }}. Un bilan d'orientation personnalisé, livré sur WhatsApp, e-mail et Telegram.</p>
       <sc-if value="{{ promo }}" hint-placeholder-val="{{ true }}">
         <div style="margin: 22px auto 0; display: inline-flex; align-items: center; gap: 10px; padding: 10px 18px; border-radius: 999px; background: rgba(251,191,36,.14); border: 1px solid rgba(251,191,36,.4); font-size: 14px; font-weight: 700; color: #FBBF24; font-variant-numeric: tabular-nums;">
           <span style="width: 7px; height: 7px; border-radius: 50%; background: #FBBF24; animation: yPulse 1.6s ease-in-out infinite;"></span>
           Offre {{ remiseLabel }} — fin dans {{ countdown }}
         </div>
       </sc-if>
-      <button onClick="{{ openPay }}" style="margin-top: 34px; border: 0; cursor: pointer; font-family: Inter, sans-serif; font-weight: 700; font-size: 17px; color: #14102B; background: #FBBF24; padding: 19px 34px; border-radius: 999px; box-shadow: 0 16px 40px rgba(251,191,36,.4); transition: transform .18s ease;" style-hover="transform: translateY(-3px);">Commencer mon diagnostic</button>
-      <div style="margin-top: 22px; font-size: 13px; color: rgba(255,255,255,.55);">Paiement sécurisé CinetPay — mobile money ou carte · Rapport garanti ou remboursé</div>
+      <button onClick="{{ openPay }}" style="margin-top: 34px; border: 0; cursor: pointer; font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 17px; color: #14102B; background: #FBBF24; padding: 19px 34px; border-radius: 999px; box-shadow: 0 16px 40px rgba(251,191,36,.4); transition: transform .18s ease;" style-hover="transform: translateY(-3px);">Commencer mon diagnostic</button>
+      <div style="margin-top: 22px; font-size: 13px; color: rgba(255,255,255,.55);">Sans paiement ni carte bancaire · rapport livré par e-mail, WhatsApp ou Telegram</div>
     </div>
   </section>
 
   <footer style="background: #FFFFFF; border-top: 1px solid rgba(20,16,43,.08);">
     <div style="max-width: 1180px; margin: 0 auto; padding: 44px 24px; display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between;">
       <div style="display: flex; align-items: center; gap: 10px;">
-        <img src="mark.png" alt="" style="width: 38px; height: 38px; display: block;" />
+        <img src="assets/mark.png" alt="" style="width: 38px; height: 38px; display: block;" />
         <div>
-          <div style="font-family: Poppins, sans-serif; font-weight: 800; letter-spacing: .1em; font-size: 18px;">YEDIDIA</div>
+          <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800; letter-spacing: .1em; font-size: 18px;">YEDIDIA</div>
           <div style="font-size: 12px; color: #94A3B8;">La solution à vos besoins du quotidien · Côte d'Ivoire</div>
         </div>
       </div>
@@ -679,7 +679,18 @@
         <a href="#filieres" style="color: #64748B;">Filières</a>
         <a href="#actualites" style="color: #64748B;">Actualités</a>
         <a href="#faq" style="color: #64748B;">FAQ</a>
-        <a href="mailto:odicarine@gmail.com" style="color: #64748B;">Nous écrire</a>
+      </div>
+    </div>
+    <div style="border-top: 1px solid rgba(20,16,43,.07);">
+      <div style="max-width: 1180px; margin: 0 auto; padding: 26px 24px 40px; display: grid; gap: 18px;">
+        <div style="display: flex; flex-wrap: wrap; gap: 10px 22px; font-size: 13px; font-weight: 600;">
+          <a href="confidentialite.html" style="color: #4F46E5;">Politique de confidentialité</a>
+          <a href="mentions-legales.html" style="color: #4F46E5;">Mentions légales</a>
+          <a href="mailto:contact@yedidia.ci" style="color: #4F46E5;">contact@yedidia.ci</a>
+          <a href="mailto:donnees@yedidia.ci" style="color: #4F46E5;">Exercer mes droits sur mes données</a>
+        </div>
+        <p style="margin: 0; font-size: 12.5px; line-height: 1.75; color: #94A3B8; max-width: 62em;">Éditeur : <strong style="color: #64748B;">YEDIDIA</strong> — Abidjan, Côte d'Ivoire. Responsable du traitement des données : {{ responsable }}. Traitement de données à caractère personnel en cours de déclaration auprès de l'<strong style="color: #64748B;">ARTCI</strong>, conformément à la loi n°2013-450 du 19 juin 2013. YEDIDIA est un service d'accompagnement privé, indépendant du MESRS et des établissements cités ; les informations officielles restent celles publiées par le ministère.</p>
+        <p style="margin: 0; font-size: 12.5px; color: #CBD5E1;">© {{ annee }} YEDIDIA. Vulnérabilité ou abus à signaler : <a href="mailto:securite@yedidia.ci" style="color: #94A3B8;">securite@yedidia.ci</a> · <a href=".well-known/security.txt" style="color: #94A3B8;">security.txt</a></p>
       </div>
     </div>
   </footer>
@@ -690,56 +701,99 @@
         <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;">
           <div>
             <div style="font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: #7C3AED; font-weight: 700;">Étape 1 sur 2</div>
-            <div style="font-family: Poppins, sans-serif; font-weight: 800; font-size: 24px; margin-top: 8px;">Débloquer mon diagnostic</div>
+            <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 24px; margin-top: 8px;">Débloquer mon diagnostic</div>
           </div>
           <button onClick="{{ closePay }}" aria-label="Fermer" style="flex: none; width: 34px; height: 34px; border-radius: 50%; border: 0; background: #F1F0F6; cursor: pointer; font-size: 16px; color: #64748B;">✕</button>
         </div>
         <div style="margin-top: 22px; border: 1px solid rgba(20,16,43,.1); border-radius: 16px; padding: 16px 18px; display: flex; align-items: center; justify-content: space-between; gap: 12px;">
           <div>
             <div style="font-size: 14px; font-weight: 700;">Bilan d'orientation personnalisé</div>
-            <div style="font-size: 12px; color: #64748B; margin-top: 3px;">Rapport PDF + envoi WhatsApp, e-mail, Telegram</div>
+            <div style="font-size: 12px; color: #64748B; margin-top: 3px;">Rapport PDF livré par e-mail, WhatsApp et Telegram</div>
           </div>
           <div style="text-align: right;">
             <sc-if value="{{ promo }}" hint-placeholder-val="{{ true }}">
               <div style="font-size: 13px; color: #94A3B8; text-decoration: line-through;">{{ prixPleinLabel }}</div>
             </sc-if>
-            <div style="font-family: Poppins, sans-serif; font-weight: 800; font-size: 20px; white-space: nowrap;">{{ prixLabel }}</div>
+            <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 20px; white-space: nowrap; color: #16A34A;">Gratuit</div>
           </div>
         </div>
         <sc-if value="{{ promo }}" hint-placeholder-val="{{ true }}">
           <div style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; padding: 11px 14px; border-radius: 12px; background: #FFFBEB; border: 1px solid #FDE68A; font-size: 12.5px; color: #92400E; font-weight: 600;">
             <span style="background: #14102B; color: #FBBF24; padding: 3px 9px; border-radius: 999px; font-weight: 700;">{{ remiseLabel }}</span>
-            <span>Remise de lancement appliquée · expire dans <span style="font-variant-numeric: tabular-nums;">{{ countdown }}</span></span>
+            <span>Offert pendant le lancement · l'offre expire dans <span style="font-variant-numeric: tabular-nums;">{{ countdown }}</span></span>
           </div>
         </sc-if>
-        <div style="margin-top: 22px; display: flex; align-items: center; justify-content: space-between; gap: 12px;">
-          <div style="font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #94A3B8;">Moyen de paiement</div>
-          <div style="display: inline-flex; align-items: center; gap: 7px; font-size: 12px; color: #64748B;">
-            <span style="width: 15px; height: 15px; border-radius: 4px; background: linear-gradient(135deg, #16A34A, #0EA5E9);"></span>
-            via <strong style="color: #14102B;">CinetPay</strong>
+        <sc-if value="{{ envoye }}" hint-placeholder-val="{{ false }}">
+          <div style="margin-top: 24px; border: 1px solid #BBF7D0; background: #F0FDF4; border-radius: 18px; padding: 22px;">
+            <div style="font-family: Poppins, system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 19px; color: #14532D;">Vérifiez votre boîte mail</div>
+            <p style="margin: 10px 0 0; font-size: 14px; line-height: 1.7; color: #166534;">Un message de confirmation vient de partir vers <strong>{{ emailEnvoye }}</strong>. Cliquez le lien qu'il contient : il ouvre le questionnaire et confirme votre accord. Sans ce clic, aucune donnée n'est conservée et aucun message ne vous sera envoyé.</p>
+            <p style="margin: 12px 0 0; font-size: 13px; line-height: 1.65; color: #15803D;">Rien reçu au bout de 5 minutes ? Regardez dans les spams, puis écrivez à <a href="mailto:contact@yedidia.ci" style="color: #15803D; font-weight: 600;">contact@yedidia.ci</a>.</p>
           </div>
+          <button onClick="{{ closePay }}" style="margin-top: 18px; width: 100%; border: 1px solid rgba(20,16,43,.14); background: #FFFFFF; cursor: pointer; font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 15px; color: #14102B; padding: 15px 24px; border-radius: 999px;">Fermer</button>
+        </sc-if>
+        <sc-if value="{{ pasEnvoye }}" hint-placeholder-val="{{ true }}">
+        <div style="margin-top: 24px;">
+          <div style="font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #94A3B8;">Où recevoir le rapport</div>
+          <p style="margin: 8px 0 0; font-size: 13px; line-height: 1.6; color: #64748B;">L'e-mail sert à confirmer la demande. WhatsApp et Telegram sont facultatifs : le rapport y est aussi envoyé si vous les renseignez.</p>
         </div>
-        <div style="margin-top: 12px; display: grid; grid-template-columns: repeat(auto-fit, minmax(96px, 1fr)); gap: 8px;">
-          <div style="border: 1px solid rgba(20,16,43,.12); border-radius: 12px; padding: 12px 10px; text-align: center; font-size: 13px; font-weight: 600;">Wave</div>
-          <div style="border: 1px solid rgba(20,16,43,.12); border-radius: 12px; padding: 12px 10px; text-align: center; font-size: 13px; font-weight: 600;">Orange Money</div>
-          <div style="border: 1px solid rgba(20,16,43,.12); border-radius: 12px; padding: 12px 10px; text-align: center; font-size: 13px; font-weight: 600;">MTN MoMo</div>
-          <div style="border: 1px solid rgba(20,16,43,.12); border-radius: 12px; padding: 12px 10px; text-align: center; font-size: 13px; font-weight: 600;">Moov Money</div>
-          <div style="border: 1px solid rgba(20,16,43,.12); border-radius: 12px; padding: 12px 10px; text-align: center; font-size: 13px; font-weight: 600;">Carte bancaire</div>
+        <div style="margin-top: 16px; display: grid; gap: 14px;">
+          <label style="display: block;">
+            <span style="display: flex; align-items: baseline; gap: 8px; font-size: 13px; font-weight: 700; color: #14102B;">E-mail<span style="font-weight: 500; font-size: 12px; color: #94A3B8;">· obligatoire</span></span>
+            <input type="email" name="email" autoComplete="email" inputMode="email" placeholder="prenom.nom@email.com" value="{{ vEmail }}" onChange="{{ setEmail }}" aria-invalid="{{ errEmailBool }}" style="{{ styEmail }}" style-focus="border-color: #7C3AED; outline: none; box-shadow: 0 0 0 3px rgba(124,58,237,.12);" />
+            <sc-if value="{{ errEmail }}" hint-placeholder-val="{{ false }}"><p style="margin: 6px 0 0; font-size: 12px; font-weight: 600; color: #DC2626;">{{ errEmail }}</p></sc-if>
+          </label>
+          <label style="display: block;">
+            <span style="display: flex; align-items: baseline; gap: 8px; font-size: 13px; font-weight: 700; color: #14102B;">Numéro WhatsApp<span style="font-weight: 500; font-size: 12px; color: #94A3B8;">· facultatif, avec indicatif</span></span>
+            <input type="tel" name="whatsapp" autoComplete="tel" inputMode="tel" placeholder="+225 07 00 00 00 00" value="{{ vWhatsapp }}" onChange="{{ setWhatsapp }}" style="{{ styWhatsapp }}" style-focus="border-color: #7C3AED; outline: none; box-shadow: 0 0 0 3px rgba(124,58,237,.12);" />
+            <sc-if value="{{ errWhatsapp }}" hint-placeholder-val="{{ false }}"><p style="margin: 6px 0 0; font-size: 12px; font-weight: 600; color: #DC2626;">{{ errWhatsapp }}</p></sc-if>
+          </label>
+          <label style="display: block;">
+            <span style="display: flex; align-items: baseline; gap: 8px; font-size: 13px; font-weight: 700; color: #14102B;">Identifiant Telegram<span style="font-weight: 500; font-size: 12px; color: #94A3B8;">· facultatif</span></span>
+            <input type="text" name="telegram" placeholder="@monpseudo" value="{{ vTelegram }}" onChange="{{ setTelegram }}" style="{{ styTelegram }}" style-focus="border-color: #7C3AED; outline: none; box-shadow: 0 0 0 3px rgba(124,58,237,.12);" />
+            <sc-if value="{{ errTelegram }}" hint-placeholder-val="{{ false }}"><p style="margin: 6px 0 0; font-size: 12px; font-weight: 600; color: #DC2626;">{{ errTelegram }}</p></sc-if>
+          </label>
         </div>
-        <label style="display: block; margin-top: 20px; font-size: 13px; font-weight: 600; color: #475569;">Numéro de téléphone
-          <input type="tel" placeholder="07 00 00 00 00" style="margin-top: 8px; width: 100%; border: 1px solid rgba(20,16,43,.15); border-radius: 12px; padding: 14px 15px; font-family: Inter, sans-serif; font-size: 16px; color: #14102B;" />
-        </label>
-        <a href="{{ formUrl }}" target="_blank" rel="noopener" style="margin-top: 18px; display: block; text-align: center; font-weight: 700; font-size: 16px; color: #14102B; background: #FBBF24; padding: 17px 24px; border-radius: 999px; box-shadow: 0 12px 28px rgba(251,191,36,.36);">Payer {{ prixLabel }} et commencer</a>
-        <p style="margin: 14px 0 0; font-size: 12px; line-height: 1.6; color: #94A3B8; text-align: center;">Paiement sécurisé par CinetPay (mobile money & carte, Côte d'Ivoire) · après validation, vous êtes redirigé vers le questionnaire. Rapport garanti ou remboursé.</p>
+        <div style="margin-top: 20px; display: grid; gap: 13px; padding: 16px 17px; border-radius: 16px; background: #F8FAFC; border: 1px solid rgba(20,16,43,.08);">
+          <label style="display: flex; gap: 11px; align-items: flex-start; cursor: pointer;">
+            <input type="checkbox" name="mineur" checked="{{ vMineur }}" onChange="{{ setMineur }}" style="margin-top: 2px; width: 18px; height: 18px; flex: none; accent-color: #7C3AED; cursor: pointer;" />
+            <span style="font-size: 13px; line-height: 1.6; color: #475569;">Le bachelier concerné a <strong style="color: #14102B;">moins de 18 ans</strong>.</span>
+          </label>
+          <sc-if value="{{ vMineur }}" hint-placeholder-val="{{ false }}">
+            <label style="display: block;">
+              <span style="display: flex; align-items: baseline; gap: 8px; font-size: 13px; font-weight: 700; color: #14102B;">E-mail du parent ou tuteur<span style="font-weight: 500; font-size: 12px; color: #94A3B8;">· obligatoire</span></span>
+              <input type="email" name="parent" autoComplete="email" inputMode="email" placeholder="parent@email.com" value="{{ vParent }}" onChange="{{ setParent }}" style="{{ styParent }}" style-focus="border-color: #7C3AED; outline: none; box-shadow: 0 0 0 3px rgba(124,58,237,.12);" />
+              <sc-if value="{{ errParent }}" hint-placeholder-val="{{ false }}"><p style="margin: 6px 0 0; font-size: 12px; font-weight: 600; color: #DC2626;">{{ errParent }}</p></sc-if>
+              <p style="margin: 7px 0 0; font-size: 12px; line-height: 1.6; color: #94A3B8;">La loi ivoirienne exige l'accord d'un parent pour traiter les données d'un mineur. La demande de confirmation lui sera envoyée.</p>
+            </label>
+          </sc-if>
+          <label style="display: flex; gap: 11px; align-items: flex-start; cursor: pointer;">
+            <input type="checkbox" name="consent" checked="{{ vConsent }}" onChange="{{ setConsent }}" style="margin-top: 2px; width: 18px; height: 18px; flex: none; accent-color: #7C3AED; cursor: pointer;" />
+            <span style="font-size: 13px; line-height: 1.6; color: #475569;">J'accepte que YEDIDIA traite ces coordonnées, mes réponses au questionnaire et mes notes dans le seul but de produire et de me livrer mon rapport d'orientation, comme décrit dans la <a href="confidentialite.html" target="_blank" rel="noopener noreferrer" style="color: #4F46E5; font-weight: 600;">politique de confidentialité</a>.</span>
+          </label>
+          <sc-if value="{{ errConsent }}" hint-placeholder-val="{{ false }}"><p style="margin: 6px 0 0; font-size: 12px; font-weight: 600; color: #DC2626;">{{ errConsent }}</p></sc-if>
+        </div>
+        <sc-if value="{{ errGlobal }}" hint-placeholder-val="{{ false }}">
+          <p style="margin: 16px 0 0; font-size: 13px; font-weight: 600; line-height: 1.6; color: #B91C1C; background: #FEF2F2; border: 1px solid #FECACA; border-radius: 12px; padding: 12px 14px;">{{ errGlobal }}</p>
+        </sc-if>
+        <sc-if value="{{ aLienSecours }}" hint-placeholder-val="{{ false }}">
+          <a href="{{ lienSecours }}" target="_blank" rel="noopener noreferrer" style="margin-top: 12px; display: block; text-align: center; font-weight: 700; font-size: 15px; color: #FFFFFF; background: #4F46E5; padding: 15px 24px; border-radius: 999px;">Ouvrir le questionnaire</a>
+        </sc-if>
+        <button onClick="{{ submit }}" disabled="{{ enCours }}" style="{{ styBouton }}" style-hover="filter: brightness(1.04);">{{ boutonLabel }}</button>
+        <p style="margin: 14px 0 0; font-size: 12px; line-height: 1.6; color: #94A3B8; text-align: center;">Aucun paiement, aucune carte bancaire. Vos données ne sont ni revendues ni partagées, et sont supprimées 12 mois après la livraison du rapport.</p>
+        </sc-if>
       </div>
     </div>
   </sc-if>
 </div>
 
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;variant&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;A&quot;,&quot;B&quot;],&quot;default&quot;:&quot;A&quot;,&quot;tsType&quot;:&quot;'A' | 'B'&quot;,&quot;section&quot;:&quot;Direction&quot;},&quot;dateLimitePreinscription&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;2026-08-16T23:59:59+00:00&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Préinscriptions&quot;},&quot;promoActive&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Offre de lancement&quot;},&quot;prixPlein&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:5000,&quot;min&quot;:0,&quot;max&quot;:50000,&quot;step&quot;:500,&quot;unit&quot;:&quot;FCFA&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Offre de lancement&quot;},&quot;prix&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:2500,&quot;min&quot;:0,&quot;max&quot;:50000,&quot;step&quot;:500,&quot;unit&quot;:&quot;FCFA&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Offre de lancement&quot;},&quot;promoJours&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:5,&quot;min&quot;:1,&quot;max&quot;:30,&quot;step&quot;:1,&quot;unit&quot;:&quot;jours&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Offre de lancement&quot;},&quot;formUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://tinyurl.com/YedidIAOrientations&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Offre de lancement&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;variant&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;A&quot;,&quot;B&quot;],&quot;default&quot;:&quot;A&quot;,&quot;tsType&quot;:&quot;'A' | 'B'&quot;,&quot;section&quot;:&quot;Direction&quot;},&quot;dateLimitePreinscription&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;2026-08-16T23:59:59+00:00&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Préinscriptions&quot;},&quot;promoActive&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Offre de lancement&quot;},&quot;promoFin&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;2026-08-10T23:59:59+00:00&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Offre de lancement&quot;},&quot;prixPlein&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:5000,&quot;min&quot;:0,&quot;max&quot;:50000,&quot;step&quot;:500,&quot;unit&quot;:&quot;FCFA&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Offre de lancement&quot;},&quot;prix&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:0,&quot;min&quot;:0,&quot;max&quot;:50000,&quot;step&quot;:500,&quot;unit&quot;:&quot;FCFA&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Offre de lancement&quot;},&quot;promoJours&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:5,&quot;min&quot;:1,&quot;max&quot;:30,&quot;step&quot;:1,&quot;unit&quot;:&quot;jours&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Offre de lancement&quot;},&quot;apiUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Collecte des données&quot;},&quot;formUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Collecte des données&quot;},&quot;responsable&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;YEDIDIA (Abidjan)&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Collecte des données&quot;}}">
 class Component extends DCLogic {
-  state = { variant: null, payOpen: false, now: Date.now(), serie: "D" };
+  state = {
+    variant: null, payOpen: false, now: Date.now(), serie: "D",
+    f: { email: "", whatsapp: "", telegram: "", parent: "", mineur: false, consent: false },
+    errs: {}, errGlobal: "", enCours: false, envoye: false, emailEnvoye: "", lienSecours: ""
+  };
 
   static NOTES = {
     A: "Série littéraire : accès large aux lettres, sciences humaines, droit et communication. Certaines écoles de gestion et de tourisme recrutent aussi en A.",
@@ -864,16 +918,66 @@ class Component extends DCLogic {
   };
 
   promoEnd() {
-    const days = this.props.promoJours ?? 5;
-    const key = "yedidia_promo_end";
-    let v = null;
-    try { v = window.localStorage.getItem(key); } catch (e) { v = null; }
-    let end = v ? parseInt(v, 10) : NaN;
-    if (!end || isNaN(end) || end < Date.now()) {
-      end = Date.now() + days * 86400000;
-      try { window.localStorage.setItem(key, String(end)); } catch (e) {}
+    const iso = this.props.promoFin ?? "2026-08-10T23:59:59+00:00";
+    const end = new Date(iso).getTime();
+    return isNaN(end) ? 0 : end;
+  }
+
+  champ(nom, val) {
+    this.setState((s) => ({ f: Object.assign({}, s.f, { [nom]: val }), errs: {}, errGlobal: "", lienSecours: "" }));
+  }
+
+  valider() {
+    const f = this.state.f;
+    const e = {};
+    const mail = /^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i;
+    if (!f.email.trim()) e.email = "Indiquez une adresse e-mail : c'est par là que passe la confirmation.";
+    else if (!mail.test(f.email.trim())) e.email = "Cette adresse ne semble pas valide.";
+    if (f.whatsapp.trim() && !/^\+?[0-9][0-9\s.-]{7,}$/.test(f.whatsapp.trim())) e.whatsapp = "Format attendu : +225 suivi du numéro.";
+    if (f.telegram.trim() && !/^@?[a-z0-9_]{4,32}$/i.test(f.telegram.trim())) e.telegram = "Identifiant Telegram invalide (ex. @monpseudo).";
+    if (f.mineur && !mail.test(f.parent.trim())) e.parent = "L'accord d'un parent est obligatoire pour un mineur.";
+    if (f.mineur && f.parent.trim().toLowerCase() === f.email.trim().toLowerCase()) e.parent = "Indiquez une adresse différente de celle du bachelier.";
+    if (!f.consent) e.consent = "Votre accord est nécessaire pour que nous puissions traiter la demande.";
+    return e;
+  }
+
+  async submit() {
+    if (this.state.enCours) return;
+    const errs = this.valider();
+    if (Object.keys(errs).length) { this.setState({ errs: errs, errGlobal: "" }); return; }
+    const f = this.state.f;
+    this.setState({ enCours: true, errGlobal: "" });
+    const api = this.props.apiUrl ?? "";
+    const charge = {
+      email: f.email.trim(),
+      whatsapp: f.whatsapp.trim(),
+      telegram: f.telegram.trim() ? (f.telegram.trim()[0] === "@" ? f.telegram.trim() : "@" + f.telegram.trim()) : "",
+      mineur: f.mineur ? "oui" : "non",
+      parent: f.mineur ? f.parent.trim() : "",
+      consentement: "oui",
+      consentementDate: new Date().toISOString(),
+      variante: this.variant
+    };
+    if (!api) {
+      const fallback = this.props.formUrl ?? "";
+      this.setState({
+        enCours: false,
+        errGlobal: fallback
+          ? "L'enregistrement automatique n'est pas encore actif. Ouvrez le questionnaire ci-dessous : vos réponses nous parviennent directement."
+          : "Le formulaire n'est pas encore relié à nos serveurs, rien n'a été enregistré. Écrivez-nous à contact@yedidia.ci, nous vous envoyons le questionnaire à la main.",
+        lienSecours: fallback
+      });
+      return;
     }
-    return end;
+    try {
+      const body = new URLSearchParams(Object.assign({ action: "inscription" }, charge));
+      const r = await fetch(api, { method: "POST", body: body });
+      const j = await r.json();
+      if (!j || j.ok !== true) throw new Error(j && j.erreur ? j.erreur : "Envoi refusé");
+      this.setState({ enCours: false, envoye: true, emailEnvoye: charge.email });
+    } catch (err) {
+      this.setState({ enCours: false, errGlobal: "L'envoi a échoué. Vérifiez votre connexion et réessayez, ou écrivez-nous à contact@yedidia.ci." });
+    }
   }
 
   preinsc() {
@@ -950,11 +1054,15 @@ class Component extends DCLogic {
   }
 
   renderVals() {
+    const champStyle = (err) =>
+      "margin-top: 7px; width: 100%; border: 1px solid " + (err ? "#DC2626" : "rgba(20,16,43,.15)") +
+      "; border-radius: 12px; padding: 13px 15px; font-family: Inter, system-ui, -apple-system, sans-serif; font-size: 16px; color: #14102B; background: " +
+      (err ? "#FFF7F7" : "#FFFFFF") + ";";
     const v = this.variant;
     const fcfa = (n) => n.toLocaleString("fr-FR").replace(/\u202f|\u00a0/g, " ") + " FCFA";
     const prixPlein = this.props.prixPlein ?? 5000;
     const promo = this.props.promoActive ?? true;
-    const prix = promo ? (this.props.prix ?? 2500) : prixPlein;
+    const prix = promo ? (this.props.prix ?? 0) : prixPlein;
     const cd = this.countdown();
     const pi = this.preinsc();
     const on = { background: "#FFFFFF", color: "#14102B", shadow: "0 2px 8px rgba(20,16,43,.12)" };
@@ -966,7 +1074,7 @@ class Component extends DCLogic {
       isB: v === "B",
       tabABg: a.background, tabAFg: a.color, tabASh: a.shadow,
       tabBBg: b.background, tabBFg: b.color, tabBSh: b.shadow,
-      prixLabel: fcfa(prix),
+      prixLabel: prix === 0 ? "Gratuit" : fcfa(prix),
       prixPleinLabel: fcfa(prixPlein),
       promo: promo,
       remiseLabel: "-" + Math.round((1 - prix / prixPlein) * 100) + "%",
@@ -978,7 +1086,43 @@ class Component extends DCLogic {
       piJours: pi.jours,
       piDate: pi.dateTxt,
       promoOver: cd.txt === "0j 00:00:00",
-      formUrl: this.props.formUrl ?? "https://tinyurl.com/YedidIAOrientations",
+      formUrl: this.props.formUrl ?? "",
+      annee: new Date().getFullYear(),
+      responsable: this.props.responsable ?? "YEDIDIA (Abidjan)",
+      envoye: this.state.envoye,
+      pasEnvoye: !this.state.envoye,
+      emailEnvoye: this.state.emailEnvoye,
+      enCours: this.state.enCours,
+      boutonLabel: this.state.enCours ? "Envoi en cours…" : "Recevoir mon diagnostic — gratuit",
+      styBouton: "margin-top: 22px; width: 100%; border: 0; cursor: " + (this.state.enCours ? "wait" : "pointer") +
+        "; font-family: Inter, system-ui, -apple-system, sans-serif; text-align: center; font-weight: 700; font-size: 16px; color: #14102B; background: " +
+        (this.state.enCours ? "#FDE68A" : "#FBBF24") + "; padding: 17px 24px; border-radius: 999px; box-shadow: 0 12px 28px rgba(251,191,36,.36);",
+      vEmail: this.state.f.email,
+      vWhatsapp: this.state.f.whatsapp,
+      vTelegram: this.state.f.telegram,
+      vParent: this.state.f.parent,
+      vMineur: this.state.f.mineur,
+      vConsent: this.state.f.consent,
+      styEmail: champStyle(this.state.errs.email),
+      styWhatsapp: champStyle(this.state.errs.whatsapp),
+      styTelegram: champStyle(this.state.errs.telegram),
+      styParent: champStyle(this.state.errs.parent),
+      errEmail: this.state.errs.email || "",
+      errEmailBool: !!this.state.errs.email,
+      errWhatsapp: this.state.errs.whatsapp || "",
+      errTelegram: this.state.errs.telegram || "",
+      errParent: this.state.errs.parent || "",
+      errConsent: this.state.errs.consent || "",
+      errGlobal: this.state.errGlobal,
+      lienSecours: this.state.lienSecours,
+      aLienSecours: !!this.state.lienSecours,
+      setEmail: (e) => this.champ("email", e.target.value),
+      setWhatsapp: (e) => this.champ("whatsapp", e.target.value),
+      setTelegram: (e) => this.champ("telegram", e.target.value),
+      setParent: (e) => this.champ("parent", e.target.value),
+      setMineur: (e) => this.champ("mineur", e.target.checked),
+      setConsent: (e) => this.champ("consent", e.target.checked),
+      submit: () => this.submit(),
       pickA: () => this.setState({ variant: "A" }),
       pickB: () => this.setState({ variant: "B" }),
       openPay: () => this.setState({ payOpen: true }),
