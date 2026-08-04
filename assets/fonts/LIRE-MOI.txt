@@ -1,15 +1,13 @@
-Polices auto-hebergees (securite : supprime tout appel a Google Fonts)
-=====================================================================
-Deposez ici deux fichiers, exactement sous ces noms :
+Polices auto-hebergees (aucun appel a Google Fonts)
+====================================================
 
-  poppins-latin.woff2   (Poppins, graisses 600 / 700 / 800)
-  inter-latin.woff8 -> inter-latin.woff2   (Inter, graisses 400 a 700)
+Fichiers attendus dans ce dossier :
+  poppins-latin.woff2            Poppins 800 (titres, logo, chiffres)
+  inter-v20-latin-regular.woff2  Inter 400 (corps de texte)
+  inter-v20-latin-500.woff2      Inter 500
+  inter-v20-latin-600.woff2      Inter 600
+  inter-v20-latin-700.woff2      Inter 700 (boutons, accents)
 
-Ou les obtenir (1 minute, sans compte) :
-  1. Aller sur https://gwfh.mranftl.com/fonts
-  2. Chercher "Poppins", cocher 600, 700, 800, charset "latin",
-     telecharger, renommer le .woff2 en poppins-latin.woff2
-  3. Idem pour "Inter" avec 400, 500, 600, 700 -> inter-latin.woff2
-
-Tant que ces fichiers sont absents, le site s'affiche avec la police
-systeme : lisible, mais l'identite typographique est perdue.
+Source : gwfh.mranftl.com (jeu de caracteres latin, format woff2).
+Si un fichier est renomme, mettre a jour les blocs @font-face
+en tete de index.html, confidentialite.html et mentions-legales.html.
